@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+
+WELCOME USER! You've reached the source code for a manual made by STS. If you plan on updating or editing this manual in any way, PLEASE read the guide on how to edit STS manuals. If you don't plan on editing this manual, then what are you doing here?
+
+Please adhere to strictly to the guide when editing this document. It helps keep everything organized and working nicely. (It also helps to have a bit of HTML experience.)
+
+So, before you get started, here's a few quick notes:
+* Do not touch the head of this document, only the body portion
+* Don't forget to add tags/classes to their proper elements
+
+Good luck, and have fun!
+
+-->
+
+    <!-- page title -->
+    <title>Sample Manual</title>
+
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Software manual provided by Software Training for Students at the University of Wisconsin.">
+
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="resources/stylesheet.css">
+
+    <!-- link to code highlight js file -->
+    <script src="resources/code-highlight-script.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <!-- link to jQuery hosted by Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- link to main js effects file -->
+    <script src="resources/effects.js"></script>
+
+    <!-- link to Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Ubuntu:400,300italic,300,400italic,500,500italic,700,700italic|Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <!-- begin front page -->
+    <div id="coverpage-title">
+        <h1>Sample Manual</h1>
+        <h2>Small Tagline Description Here</h2>
+        <h3><em>Classroom Course Manual</em></h3>
+    </div>
+    <div id="coverpage-description">
+        <img src="resources/uwlogo.png">
+        <p>Written, designed, and produced by:</p>
+        <p>DoIT Software Training for Students</p>
+        <p><em>Last Updated 5/26/2016</em></p>
+    </div>
+
+    <!-- end front page -->
+
+    <!-- page break -->
+    <div class="page-break"></div>
+
+    <!-- begin about page -->
+    <h1 class="no-top-margin">About Software Training for Students</h1>
+    <p>Software Training for Students is an organization on campus that provides free software training to all students and faculty. Our services include custom workshops, open-enrollment classes, one-on-one project help, and access to Lynda.com. For more information on the Software Training for Students (STS) program, visit our website at <b><a href = "http://wisc.edu/sts">wisc.edu/sts</a></b>.</p>
+    <div class="full-width-image"><img src="resources/sts-services.png"></div>
+    <p>STS is part of the Division of Information Technology (DoIT) - Academic Technology at UW-Madison. For more information regarding DoIT Academic Technology, visit <b><a href = "https://at.doit.wisc.edu/">at.doit.wisc.edu</a></b>.</p>
+
+    <p><b>&copy; University of Wisconsin Board of Regents.</b></p>
+
+    <p>This manual and any accompanying files were developed for use by current students at the University of Wisconsin-Madison. The names of software products referred to in these materials are claimed as trademarks of their respective companies or trakemark holder.</p>
+    <p>If you are not a current member of the UW-Madison community and would like to use STS materials for self-study or to teach others, please contact sts@doit.wisc.edu. Thank you.</p>
+    <!-- end about page -->
+
+    <!-- page break -->
+    <div class="page-break"></div>
+
+    <!-- begin outline -->
+    <h1 class="no-top-margin">Topics Outline</h1>
+    <div id="outline">
+    </div>
+    <!-- end outline -->
+
+    <!-- page break -->
+    <div class="page-break"></div>
+
+    <!-- BEGIN MAIN CONTENT -->
+    <h1 class="no-top-margin">Essential Elements</h1>
+    <h2>Lists</h2>
+    <p>Curabitur ullamcorper est et odio tincidunt posuere. Vivamus tristique diam quis massa sollicitudin fermentum. Aliquam ligula tortor, porttitor a nulla at, scelerisque ultrices nibh. Nam nec vulputate ante. Aliquam euismod nibh a lacus commodo placerat.</p>
+    <ul>
+        <li>
+            <p>Curabitur in viverra tellus, ut cursus diam.</p>
+        </li>
+        <li>
+            <p>Maecenas tincidunt facilisis est. Nullam ligula est, euismod sed tortor quis.</p>
+        </li>
+        <li>
+            <p>Nullam sagittis sem sed ligula auctor, vitae vulputate metus euismod.</p>
+        </li>
+    </ul>
+
+    <ol>
+        <li>
+            <p>Suspendisse porttitor diam vitae tincidunt ornare.</p>
+        </li>
+        <li>
+            <p>Quisque semper egestas nisl, eu eleifend odio volutpat et.</p>
+        </li>
+        <li>
+            <p>Integer tincidunt risus et lorem lacinia vehicula. Lobortis fermentum.</p>
+        </li>
+    </ol>
+
+    <h2>Tables</h2>
+    <p>Aliquam et venenatis risus, id commodo nisl. Donec quis commodo magna, sit amet hendrerit tortor. In diam nunc, suscipit sit amet lectus sit amet, tristique posuere leo. Duis finibus dolor metus, eu condimentum augue blandit mattis. Curabitur nec pulvinar erat.</p>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Animal</th>
+            <th>Color</th>
+        </tr>
+        <tr>
+            <td>Marcus Miers</td>
+            <td>Dolphin</td>
+            <td>Green</td>
+        </tr>
+        <tr>
+            <td>George Black</td>
+            <td>Electric Eel</td>
+            <td>Orange</td>
+        </tr>
+        <tr>
+            <td>Nolan Tenpas</td>
+            <td>Ostrich</td>
+            <td>Yellow</td>
+        </tr>
+    </table>
+
+    <h1>Character Formatting</h1>
+    <ul>
+        <li>
+            <p><b>Bold text</b></p>
+        </li>
+        <li>
+            <p><em>Italisized text</em></p>
+        </li>
+        <li>
+            <p><span class="highlight">Highlighted text</span></p>
+        </li>
+        <li>
+            <p><span class="type-text">Type text</span></p>
+        </li>
+    </ul>
+    <p>Sed et maximus turpis. <b>Suspendisse pretium sapien ac lacinia commodo.</b> Cras iaculis eget eros non feugiat. Cras eget augue pulvinar leo sollicitudin ullamcorper. <em>Fusce pretium posuere metus, at egestas neque mollis et.</em> Nullam molestie, sem ac finibus pharetra, mauris ante consequat eros, consequat fringilla odio lorem eu sem. Mauris consequat varius tortor, sit amet aliquam est. <span class="highlight">Praesent id vehicula arcu. Quisque vel nibh sit amet velit imperdiet elementum.</span> Fusce tellus purus, bibendum nec nisi eu, iaculis commodo ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <span class="type-text">Quisque sodales metus nibh, ac pretium lacus gravida a. </span>Etiam mollis, tortor et rhoncus consequat, tellus arcu porta felis, in ultricies augue sapien eget sapien. Praesent semper bibendum nisi non blandit. Etiam sit amet vulputate libero.</p>
+
+    <h1>Tools and Instructions</h1>
+    <h2>Toolbox and Tool Icons</h2>
+    <div class="toolbox">
+        <div>
+            <img src="images/sample-image-01.jpg">
+            <p><b>Tool Name:</b> In et venenatis mauris, a placerat enim. Sed tincidunt interdum enim. Cras erat tellus, tincidunt et auctor id, iaculis non quam.</p>
+        </div>
+        <div>
+            <img src="images/sample-image-02.jpg">
+            <p><b>Tool Name:</b> Vivamus ut turpis ante. Integer a ex venenatis, convallis nibh quis, vestibulum nulla. Etiam suscipit euismod erat, a hendrerit mauris elementum sed. Nullam sollicitudin dui orci, at hendrerit ex venenatis nec.</p>
+        </div>
+        <div>
+            <img src="images/sample-image-03.jpg">
+            <p><b>Tool Name:</b> Etiam vel neque viverra, vulputate odio at, lacinia leo. </p>
+        </div>
+    </div>
+
+    <img class="sidebar-icon" src="images/sample-image-06.jpg">
+    <p>Aliquam id risus purus. Vivamus nec nunc mi. Suspendisse vel tempor felis, eget ullamcorper augue. Vivamus vitae risus id nisl lacinia vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla eros odio, tempor a diam molestie, pellentesque laoreet felis. Ut maximus urna at nulla condimentum ultrices. Pellentesque tincidunt euismod libero, id finibus felis.</p><img class="sidebar-icon" src="images/sample-image-07.jpg">
+    <p> Proin eleifend est id dignissim facilisis. Suspendisse tincidunt lacus vel ullamcorper egestas. Proin nec erat condimentum, porta nisl non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet, tellus a commodo pellentesque, nisi nunc consectetur neque, eget tincidunt ante lectus et elit., congue libero. Maecenas vestibulum ut erat ac scelerisque. Curabitur facilisis lacus tortor, ut maximus lectus ullamcorper eget. Cras vehicula purus ut malesuada aliquet. Maecenas ex purus, cursus a laoreet sed, ultrices at mi.</p>
+
+    <h2>Instruction Lists</h2>
+    <ol class="instruction-list">
+        <li>
+            <p>Donec dapibus ac nisl porttitor consequat. Ut ornare nunc nulla, nec ultrices urna vehicula eget. Maecenas ultrices ullamcorper purus, a congue elit condimentum sit amet.</p>
+        </li>
+        <li>
+            <p>Vestibulum gravida leo at tortor egestas faucibus. Nam eget elit sed mauris blandit efficitur. Maecenas sed justo tellus.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>Cras mi quam, aliquet ac ultrices ac, molestie eu est. Cras sit amet tortor nec est varius commodo. Duis porta lorem erat, sed feugiat sem porttitor id.</p>
+                </li>
+                <li>
+                    <p>Sed ut enim faucibus, posuere ipsum eget, lobortis risus. Fusce ac ex sit amet urna porttitor laoreet nec a orci. Aliquam erat volutpat. Morbi tincidunt fringilla ultrices.</p>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <p>Aliquam hendrerit tristique nulla, sit amet fringilla est imperdiet id.</p>
+        </li>
+    </ol>
+    <h1>Image Placement</h1>
+    <h2>Full Width Image</h2>
+    <p>Fusce pretium arcu at risus vulputate viverra. Aliquam congue ullamcorper fermentum. Ut eu pellentesque turpis. Donec a massa vel eros congue auctor. Maecenas sed arcu non eros aliquet fermentum.</p>
+    <div class="full-width-image"><img src="images/sample-image-04.jpg"></div>
+
+    <h2>Images in Sidebar</h2>
+    <div class="side-image-large"><img src="images/sample-image-06.jpg">
+        <p>This is my image caption. Did you know you could add captions? Pretty neat, huh?</p>
+    </div>
+    <p>Sed ultricies mauris imperdiet sagittis ultricies. Mauris pellentesque erat et suscipit condimentum. Maecenas non diam faucibus, convallis arcu ut, bibendum eros. Pellentesque eget sagittis eros. Phasellus lobortis nec velit a porttitor. Nam sed sem a nisl interdum posuere. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed luctus, ipsum lobortis aliquam vulputate, lacus elit euismod ipsum, sed varius massa dui eu nunc. Nulla sed elit et elit varius varius id non nibh. Ut viverra erat non faucibus vestibulum.</p>
+    <div class="side-image-medium"><img src="images/sample-image-02.jpg"></div>
+    <p>Curabitur consequat consequat lacus, a ultrices sem placerat tempor. Ut fringilla mattis felis et feugiat. Aliquam aliquet est molestie lacus fermentum accumsan. Fusce consequat eleifend bibendum. Proin viverra at ex non eleifend. Quisque varius, magna vitae volutpat hendrerit, lorem lorem semper ex, luctus faucibus eros quam nec quam. Duis sed ex lacus. Duis cursus vel ipsum ut porttitor.</p>
+
+    <p>Phasellus suscipit, eros vel gravida viverra, nulla arcu auctor nibh, vitae finibus nisi massa in nibh. Pellentesque ut turpis nisl. Donec iaculis turpis eget blandit tempus. Curabitur vestibulum ipsum urna, mattis suscipit risus iaculis vel. Praesent in nulla tellus. Vestibulum euismod odio ac convallis malesuada. Pellentesque at dui vel eros pulvinar hendrerit in aliquam libero.</p>
+
+    <h2>Centered Images</h2>
+    <p>Nulla porta erat ut odio porttitor tempus. Aenean rhoncus felis sed erat gravida, et tincidunt leo fringilla. Cras interdum sodales turpis, id vulputate neque mattis sed. Nunc non diam in ex placerat condimentum. Sed sodales et velit id pretium. Integer dignissim tellus tellus, vel tempus libero condimentum vel. Aenean ac urna neque.</p>
+    <div class="centered-image-medium"><img src="images/sample-image-07.jpg"></div>
+
+    <h2>Side by Side Images</h2>
+    <p>Suspendisse ultrices hendrerit nisi. Aliquam id consectetur mauris. Morbi ultrices, velit a sagittis posuere, dui leo semper massa, et ultricies sapien urna et nulla. Nunc sagittis ullamcorper porta.</p>
+
+    <div class="sidebyside-image-large">
+        <img src="images/sample-image-05.jpg">
+        <img src="images/sample-image-06.jpg">
+        <p>Holy cow, you can add captions for side by side images? Heck yeah you can, I just did. Get used to it.</p>
+    </div>
+
+    <h1>Sidebar Elements</h1>
+    <h2>Sidebar Notes</h2>
+    <div class="sidebar-note">
+        <h2>This is a Note</h2>
+        <p>Nulla porta erat ut odio porttitor tempus. Cras interdum sodales turpis, id vulputate neque$ mattis sed. Nunc non diam in ex placerat condimentum.</p> <img src="images/sample-image-04.jpg"></div>
+    <p>Suspendisse sit amet interdum odio. Ut rhoncus a tellus a bibendum. In quis mauris vel augue tempor pharetra non id lacus. Maecenas ultrices, nulla vitae lobortis consequat, urna mi pretium lacus, a feugiat sem erat non purus. Maecenas at erat ac erat bibendum placerat. Donec euismod porttitor mollis. Nunc pulvinar non neque ac vehicula. Aliquam nec nunc aliquam, porttitor dolor non, posuere risus. Morbi tincidunt tincidunt dapibus. Nunc finibus dolor vitae mauris porta, et ultricies ipsum mattis. Praesent ut nulla eros. Donec gravida arcu magna, a tempor dui faucibus eu. Curabitur pretium felis ultricies tellus aliquam tempor. Maecenas neque neque, malesuada fermentum justo ut, posuere mattis ante. Praesent consectetur risus massa, at ultricies justo tincidunt in. Nunc sodales justo enim, eu scelerisque nibh malesuada quis.</p>
+
+    <h2>Keyboard Shortcut</h2>
+    <div class="keyboard-shortcut">
+        <h2>Keyboard Shortcut</h2>
+        <p>Look, I'm a keyboard shortcut! Tired of running around menus, typing in the search bar, and moving your mouse everywhere? Use me instead!</p>
+        <h3>Mac:</h3>
+        <img src="resources/keyboard-icons/icon-command.svg">
+        <img src="resources/keyboard-icons/icon-shift.svg">
+        <img src="resources/keyboard-icons/icon-z.svg">
+        <h3>Windows:</h3>
+        <img src="resources/keyboard-icons/icon-control.svg">
+        <img src="resources/keyboard-icons/icon-shift.svg">
+        <img src="resources/keyboard-icons/icon-z.svg">
+
+    </div>
+    <p>Nulla cursus efficitur ligula, id pharetra augue euismod eget. Aliquam at felis bibendum, fringilla purus ut, pretium arcu. Nullam augue neque, tempus in facilisis ut, laoreet porttitor orci. Integer laoreet dictum ex ac hendrerit. Donec accumsan blandit metus at tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <h1>Code Blocks</h1>
+    <p>Integer hendrerit feugiat efficitur. Maecenas convallis varius volutpat. Vivamus eu diam facilisis, laoreet metus finibus, ultrices elit. Vivamus viverra mauris id diam viverra, in consectetur urna euismod. Quisque et nisl nisi. Nam laoreet urna nisl, quis fermentum neque eleifend nec. Pellentesque ac ante mi.</p>
+
+    <pre><code>var imageArray = new Array();
+imageArray[0].src = "images/ball0.gif"
+imageArray[1] = new Image();
+
+function bounce() {
+    console.log("This code means nothing");
+}</code></pre>
+    <!-- END MAIN CONTENT -->
+    <!-- BEGIN TESTING GROUNDS -->
+    <!-- END TESTING GROUNDS -->
+
+
+
+</body>
+
+</html>

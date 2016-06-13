@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+
+WELCOME USER! You've reached the source code for a manual made by STS. If you plan on updating or editing this manual in any way, PLEASE read the guide on how to edit STS manuals. If you don't plan on editing this manual, then what are you doing here?
+
+Please adhere to strictly to the guide when editing this document. It helps keep everything organized and working nicely. (It also helps to have a bit of HTML experience.)
+
+So, before you get started, here's a few quick notes:
+* Do not touch the head of this document, only the body portion
+* Don't forget to add tags/classes to their proper elements
+
+Good luck, and have fun!
+
+-->
+
+    <!-- page title -->
+    <title>Manual Editing</title>
+
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Software manual provided by Software Training for Students at the University of Wisconsin.">
+
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="resources/stylesheet.css">
+
+    <!-- link to code highlight js file -->
+    <script src="resources/code-highlight-script.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <!-- link to jQuery hosted by Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- link to main js effects file -->
+    <script src="resources/effects.js"></script>
+
+    <!-- link to Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Ubuntu:400,300italic,300,400italic,500,500italic,700,700italic|Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <!-- begin front page -->
+    <div id="coverpage-title">
+        <h1>Manual Editing</h1>
+        <h2>The Complete Guide for Editing Manuals</h2>
+        <h3><em>Classroom Course Manual</em></h3>
+    </div>
+    <div id="coverpage-description">
+        <img src="resources/uwlogo.png">
+        <p>Written, designed, and produced by:</p>
+        <p>DoIT Software Training for Students</p>
+        <p><em>Last Updated 6/11/2016</em></p>
+    </div>
+
+    <!-- end front page -->
+
+    <!-- page break -->
+    <div class="page-break"></div>
+
+    <!-- begin about page -->
+    <h1 class="no-top-margin">About Software Training for Students</h1>
+    <p>Software Training for Students is an organization on campus that provides free software training to all students and faculty. Our services include custom workshops, open-enrollment classes, one-on-one project help, and access to Lynda.com. For more information on the Software Training for Students (STS) program, visit our website at <b><a href = "http://wisc.edu/sts">wisc.edu/sts</a></b>.</p>
+    <div class="full-width-image"><img src="resources/sts-services.png"></div>
+    <p>STS is part of the Division of Information Technology (DoIT) - Academic Technology at UW-Madison. For more information regarding DoIT Academic Technology, visit <b><a href = "https://at.doit.wisc.edu/">at.doit.wisc.edu</a></b>.</p>
+
+    <p><b>&copy; University of Wisconsin Board of Regents.</b></p>
+
+    <p>This manual and any accompanying files were developed for use by current students at the University of Wisconsin-Madison. The names of software products referred to in these materials are claimed as trademarks of their respective companies or trakemark holder.</p>
+    <p>If you are not a current member of the UW-Madison community and would like to use STS materials for self-study or to teach others, please contact sts@doit.wisc.edu. Thank you.</p>
+    <!-- end about page -->
+    <!-- page break -->
+    <div class="page-break"></div>
+
+    <!-- begin outline -->
+    <h1 class="no-top-margin">Topics Outline</h1>
+    <div id="outline">
+    </div>
+    <!-- end outline -->
+
+    <!-- page break -->
+    <div class="page-break"></div>
+
+    <!-- BEGIN MAIN CONTENT -->
+
+    <h1 class="no-top-margin">Introduction</h1>
+    <p>Software manuals written by Software Training for Students are used all over campus to teach trainers, faculty, and students alike. They are structured and designed with HTML, CSS, and JavaScript. However, to edit the manuals, you only need a bit of knowledge with HTML.</p>
+    <p>Each manual exists as an editable HTML file. This HTML file is linked to a single master CSS file which provides formatting for all the manuals. Likewise, each manual is linked to a series of JavaScript files, provides features like an automated table of contents.</p>
+
+    <p>This handy little guide contains everything you possibly need to know about the structure of our manuals, how to edit them, and the best practices to keep in mind during the editing process. <span class="highlight">As long as you adhere to the guidelines defined by this manual, everything will be just fine.</span></p>
+
+    <p>A few things to keep in mind as you enter the wonderful world of manual editing:</p>
+    <ul>
+        <li>
+            <p>Do not add your own CSS to the document. You are only allowed to use the features and funcitons outlined in this guide.</p>
+        </li>
+        <li>
+            <p>Do not edit any files inside the <span class="type-text">resources</span> folder in each manual.</p>
+        </li>
+        <li>
+            <p>Feel free to download the manual files and edit them using Dreamweaver, or your own text editor. (Be careful, Dreamweaver likes to add its own custom CSS everywhere.)</p>
+        </li>
+        <li>
+            <p>Edit only the main content of each manual. You'll notice there are two tags in each manual that mark the beginning and end of the editable content.</p>
+        </li>
+    </ul>
+
+
+    <p>Editing manuals can be a pretty dry task. There's not really any way around that. I would reccommend putting on some good electronic or deep house music while working, at least that's what I do to make it through. I also talk to Trevor, he's a nice guy. </p>
+
+    <h1>File Structure</h1>
+    <h2>Basic Manual Structure</h2>
+    <p>Each manual is a series of files, self-contained within a single folder. Inside the folder, you should find the following things:</p>
+
+    <ul>
+        <li>
+            <p>The main HTML file containing the contents of the manual.</p>
+        </li>
+        <li>
+            <p>A resources folder containing the master files to make the manual function. Do not add, edit, or delete any files in this folder.</p>
+        </li>
+        <li>
+            <p>A class files folder, used for storing any exercise files.</p>
+        </li>
+        <li>
+            <p>An images folder, containing all screenshots and icons that are referenced within the main HTML file.</p>
+        </li>
+    </ul>
+
+    <p>Within the main HTML file, you'll find two comments, marking the beginning and end of the manual's main contents. You may only edit the HTML contained within these two comments. Outside the comments, there is important information that must be consistent across all manuals.</p>
+
+    <h2>The Resources Folder</h2>
+    <p>Just so you are aware, this section is not neccessary to know for manual editing. It is purely for informational purposes.</p>
+
+    <p>Inside of each manual folder, you'll find a folder called <span class="type-text">resources</span>. In this folder you'll find important files that are crucial to the creation of the stunningly beautiful and agile STS manuals. Here's an explanation of each of the important files.</p>
+
+    <ul>
+        <li>
+            <p><b>The Master Stylesheet:</b> Titled as <span class="type-text">stylesheet.css</span>, this file contains the styling for ALL manuals. This stylesheet should be consistent across all manuals.</p>
+        </li>
+        <li>
+            <p><b>The Highlighting Script:</b> Titled as <span class="type-text">code-highlight-script.js</span>, this file contains the JavaScript neccessary to automatically add color to code blocks used within the manuals.</p>
+        </li>
+        <li>
+            <p><b>The Effects Script:</b> Titled as <span class="type-text">effects.js</span>, this file contains any other JavaScript effects we wish to add to the manuals. Right now, it automatically generates the topics outline at the beginning of each manual, and nothing else.</p>
+        </li>
+        <li>
+            <p><b>Keyboard Icons Folder:</b> Titled as <span class="type-text">keyboard-icons</span>, this folder contains a series of SVG files representing the most common keys that can be found on Mac and Windows standard keyboards. They are intended for use with the keyboard shortcut element, however you may reference and use them anywhere you like.</p>
+        </li>
+    </ul>
+
+
+    <h1>Essential Elements</h1>
+    <h2>Headings</h2>
+    <p>The stylesheet associated with the STS manuals only supports three different levels of headings, demonstrated below.</p>
+    <div class="code-block"><pre><code>&lt;!-- heading examples --&gt;
+&lt;h1&gt; First Level Title &lt;/h1&gt;
+&lt;h2&gt; Second Level Title &lt;/h2&gt;
+&lt;h3&gt; Third Level Title &lt;/h3&gt;</code></pre></div>
+
+
+    <h2>Lists</h2>
+    <p>Unordered and ordered lists work the same way as they alway do, however <b>do not forget to add <span class = "type-text">&lt;p&gt;</span> tags inside of each list element.</b></p>
+
+    <div class="code-block"><pre><code>&lt;!-- list example --&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;p&gt; List item &lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+
+    <h2>Tables</h2>
+    <p>Building a table follows the exact same structure as your standard HTML table. So if you already know how to make tables in HTML, you can skip this I suppose.</p>
+
+    <p>First, you'll need to use the <span class="type-text">&lt;table&gt;</span> tag to begin and end the table. Inside the table, use <span class="type-text">&lt;tr&gt;</span> to specify a new row. Each row has multiple elements, enclosed with the <span class="type-text">&lt;td&gt;</span> tag. If you are creating a heading for the table (usually the top row) you use the <span class="type-text">&lt;th&gt;</span> tag instead.</p>
+
+    <p>Confused? No problem. Just check out this example of a 2x2 table below.</p>
+
+    <pre><code>&lt;!-- table example --&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt; First column heading &lt;/th&gt;
+        &lt;th&gt; Second column heading &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; Stuff in first column &lt;/td&gt;
+        &lt;td&gt; Stuff in second column &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+    <h1>Character Formatting</h1>
+    <p>There are a few different ways you can format regular paragraph text:</p>
+
+    <ul>
+        <li>
+            <p><b>Bold text</b></p>
+        </li>
+        <li>
+            <p><em>Italisized text</em></p>
+        </li>
+        <li>
+            <p><span class="highlight">Highlighted text</span></p>
+        </li>
+        <li>
+            <p><span class="type-text">Type text</span></p>
+        </li>
+    </ul>
+    <p>All basic text should be encolsed in <span class="type-text">&lt;p&gt;</span> tags. You can also use <span class="type-text">&lt;em&gt;</span> and <span class="type-text">&lt;b&gt;</span> tags to <em>italisize</em> and <b>bold</b> text. Along with this, you can highlight text using <span class="type-text">&lt;span class = "highlight"&gt;</span>.</p>
+
+    <p>Finally, you can also format words as type text. Type text is when you change the font of a few words <span class="type-text">to make it look like this.</span> This should be used when referencing something code-related in the manual, or when referring to a file name, file path, or menu bar item. You can create type text by using <span class="type-text">&lt;span class = "type-text"&gt;</span>.</p>
+
+    <div class="code-block"><pre><code>&lt;!-- bold and italics example --&gt;
+&lt;p&gt; A sentence with &lt;b&gt;bold&lt;/b&gt; and &lt;em&gt;italicized&lt;/em&gt; words. &lt;/p&gt;
+
+&lt;!-- highlight example --&gt;
+&lt;p&gt; Text with &lt;span class = "highlight"&gt; highlighted &lt;/span&gt; words. &lt;/p&gt;
+
+&lt;!-- type text example --&gt;
+&lt;p&gt; Text with &lt;span class = "type-text"&gt; typed &lt;/span&gt; words. &lt;/p&gt;
+</code></pre></div>
+
+    <h1>Tools and Instructions</h1>
+    <p>In STS manuals, we often showcase a variety of different tools in a single piece of software. We also walk users through exercises and examples, using step-by-step instructions. There's a couple different elements we'll be utilizing to help us with these tasks:</p>
+
+    <ul>
+        <li>
+            <p><b>Toolbox:</b> A small blue box (not a Tardis) that allows you to showcase different tools and provide a brief description of what they do.</p>
+        </li>
+        <li>
+            <p><b>Tool Icon:</b> When referencing a specific tool or button during an exercise, you can have it show up as a small circular icon in the sidebar.</p>
+        </li>
+        <li>
+            <p><b>Instruction List:</b> A list with special styling, used to walk users through step-by-step examples. The styling of this list distinguishes it from a normal list, and makes step-by-step procedures easier to follow.</p>
+        </li>
+    </ul>
+
+    <h2>Toolbox and Tool Icons</h2>
+    <p>A <b>toolbox</b> contains a list of tools being introduced to the user. Each tool has a small icon with an image of that tool, along with the tool name and a brief description. Here is an example of a toolbox with two tools listed.</p>
+
+
+    <pre><code>&lt;!-- toolbox example --&gt;
+&lt;div class = "toolbox"&gt;
+    &lt;div&gt;
+        &lt;img src = "images/icon-name.jpg"&gt;
+        &lt;p&gt;&lt;b&gt; Tool Name: &lt;/b&gt; A brief description of the tool. &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;img src = "images/icon-name.jpg"&gt;
+        &lt;p&gt;&lt;b&gt; Tool Name: &lt;/b&gt; A brief description of the tool. &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+    <p>Finally, <b>tool icons</b> are small circular placed in the sidebar. They are helpful for referencing specific buttons or tools during the exercise or instructions.</p>
+
+    <pre><code>&lt;!-- tool icon example --&gt;
+&lt;img class = "sidebar-icon" src = "images/icon-name.jpg"&gt;</code></pre>
+
+    <p>Please note, when taking screenshots of tools and buttons, <span class="highlight">make sure the image is proportionally square.</span> If not, the screenshot will become distored.</p>
+
+    <h2>Instruction Lists</h2>
+    <p>Instruction lists are specially styled lists used to walk users through an example or exercise. They are styled to be more visually appealing easier to follow. Do not confuse these with regular lists; they serve different purposes. These lists are <em>only</em> to be used with giving step-by-step instructions.</p>
+
+    <p>The use the instruction list, simply add the <span class="type-text">instruction-list</span> class to your <span class="type-text">&lt;ol&gt;</span> tag.</p>
+
+    <pre><code>&lt;!-- instruction list example --&gt;
+&lt;ol class = "instruction-list"&gt;
+    &lt;li&gt;&lt;p&gt; This is an item in my list &lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+    <p><span class="highlight">You can also create an instruction list inside of an instruction list, adding sub-steps to your exercise.</span> The inner instruction lists will take on special styling to help distinguish the sub steps from the main steps. Take a look at the example below.</p>
+
+    <pre><code>&lt;!-- instruction list with substeps example --&gt;
+&lt;ol class = "instruction-list"&gt;
+    &lt;li&gt;
+        &lt;p&gt; This is a step &lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;p&gt; This is a step list.&lt;/p&gt;
+        &lt;ol class = "instruction-list"&gt;
+            &lt;li&gt;&lt;p&gt; This is a sub-step! &lt;/li&gt;&lt;/p&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+&lt;/ol&gt; &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+    <h1>Image Placement</h1>
+    <p>There are three sets of classes that can be used to place images in a variety of different ways. These include:</p>
+    <ul>
+        <li>
+            <p>Images that are centered in the page.</p>
+        </li>
+        <li>
+            <p>Images that are placed in the righthand sidebar.</p>
+        </li>
+        <li>
+            <p>Images that can be placed side by side.</p>
+        </li>
+    </ul>
+    <p>Each image <em>must</em> placed inside of its own <span class="type-text">&lt;div&gt;</span> container labeled with the proper class. Also, you may optionally add a caption below your image by adding a <span class="type-text">&lt;p&gt;</span> tag immidiately below the image. Take a look at the generic structure below.</p>
+
+    <pre><code>&lt;!-- image without a caption --&gt;
+&lt;div class = "image-class-name"&gt;
+    &lt;img src = "images/image-name.jpg"&gt;
+&lt;/div&gt;
+
+&lt;!-- image with a caption --&gt;
+&lt;div class = "image-class-name"&gt;
+    &lt;img src = "images/image-name.jpg"&gt;
+    &lt;p&gt; This is my optional caption! &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+    <p>Along with this, all images (including pictures, screenshots, etc) should be stored inside the specific <span class="type-text">images</span> folder for that manual. For more information on saving and naming images, check out our image conventions section in this guide.</p>
+
+    <h2>Centered Images</h2>
+    <p>Centered images will exist in the center of the page, but can also be flexible and sit next to sidebar elements. There are five different classes of sidebar images, each with a different size. </p>
+
+    <table>
+        <tr>
+            <th>Class</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><span class="type-text">centered-image-tiny</span></td>
+            <td>Places image in center, tiny width. </td>
+        </tr>
+        <tr>
+            <td><span class="type-text">centered-image-small</span></td>
+            <td>Places image in center, small width. </td>
+        </tr>
+        <tr>
+            <td><span class="type-text">centered-image-medium</span></td>
+            <td>Places image in center, medium width. </td>
+        </tr>
+        <tr>
+            <td><span class="type-text">centered-image-large</span></td>
+            <td>Places image in center, large width. </td>
+        </tr>
+        <tr>
+            <td><span class="type-text">full-width-image</span></td>
+            <td>Allows image to take on full width of page.</td>
+        </tr>
+    </table>
+
+    <h2>Sidebar Images</h2>
+    <p>Sidebar images are useful for displaying images alongside text, rather than after the text. There are only three classes, providing three different sizes of sidebar images.</p>
+
+    <table>
+        <tr>
+            <th>Class</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><span class="type-text">side-image-small</span></td>
+            <td>Places image in righthand sidebar, gives extremely small width.</td>
+        </tr>
+        <tr>
+            <td><span class="type-text">side-image-medium</span></td>
+            <td>Places image in righthand sidebar, gives medium amount of width. </td>
+        </tr>
+        <tr>
+            <td><span class="type-text">side-image-large</span></td>
+            <td>Places image in righthand sidebar, gives large amount of width. </td>
+        </tr>
+    </table>
+
+    <h2>Side by Side Images</h2>
+    <p>Did you know you can have two images displayed side by side, in tandem? All you need to do is add the proper class to your container, then chuck two image tags inside, like you see below.</p>
+
+    <pre><code>&lt;!-- side by side images --&gt;
+&lt;div class = "sidebyside-image-class"&gt;
+    &lt;img src = "images/image-name.jpg"&gt;
+    &lt;img src = "images/image-name.jpg"&gt;
+    &lt;p&gt; This is my optional caption! &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+    <p><span class="highlight">Both images that are being placed side by side need to be the same size.</span> While this is not precisely required, it will help keep the manual visually appealing. Here's the table of side by side image classes that are available to use:</p>
+
+    <table>
+        <tr>
+            <th>Class</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><span class="type-text">side-image-small</span></td>
+            <td>Places two small images together, side by side.</td>
+        </tr>
+        <tr>
+            <td><span class="type-text">sidebyside-image-large</span></td>
+            <td>Places two large images together, side by side.</td>
+        </tr>
+    </table>
+
+    <h2>Adding Borders</h2>
+    <p>Occasionally, you'll notice the screenshots of your program have a white background that blends in with the page behind it. If you wish, you can add a light border around the image to avoid this issue. To add a light border, add the <span class="type-text">border</span> class to the <span class="type-text">&lt;div&gt;</span> element that holds the image. Take a look at the example below.</p>
+
+    <pre><code>&lt;!-- image with border --&gt;
+&lt;div class = "image-class-name border"&gt;
+    &lt;img src = "images/image-name.jpg"&gt;
+&lt;/div&gt;</code></pre>
+
+    <h1>Image Conventions</h1>
+    <p>Throughout the manual creation process, we accrue many images and screenshots that reside in the<span class="type-text"> images </span>folder. It's important to keep these images organized with good naming conventions. These manuals are also designed to be displayed on the web, which means it has to have a quick loading time. In order to attain this, we will limit the size and file type of our screenshots and images.</p>
+
+    <p>A few general guidelines:</p>
+
+    <ul>
+        <li>
+            <p>All filenames should be lowercase, with a dash in-between words.</p>
+        </li>
+        <li>
+            <p>Each screenshot should be saved as a PNG file.</p>
+        </li>
+        <li>
+            <p>Screenshots should be cropped and annotated before being placed in manual.</p>
+        </li>
+        <li>
+            <p>Screenshots of tool icons should have a square aspect ratio.</p>
+        </li>
+        <li>
+            <p>Images should not exceed <b>1200px</b> in width.</p>
+        </li>
+    </ul>
+
+    <h2>Naming General Screenshots</h2>
+    <p>The file name of each screenshot has three portions: a keyword assocating it to a specific section of the manual, a small description of what it shows, and an optional number if there are multiple screenshots of the same kind. A dash separates each section. Here's what the structure looks like:</p>
+
+    <p><span class="type-text">sectionkeyword-descriptor-number.png</span></p>
+
+    <p>And if you're looking for a few examples to work off of. Again, the number is optional.</p>
+
+    <p><span class="type-text">recoloring-dropshadow-1.png</span>
+        <br><span class="type-text">recoloring-dropshadow-2.png</span>
+        <br><span class="type-text">goalseek-menubutton.png</span>
+        <br><span class="type-text">cropping-exampleimage-1.png</span>
+        <br><span class="type-text">pivottables-settings.png</span></p>
+
+    <h2>Naming Tool Icons</h2>
+    <p>Small, square screenshots of tool icons have slightly different naming conventions. The name will consist of two words, the first being "icon" followed by the name of the tool. Here are a few examples:</p>
+
+    <p><span class="type-text">icon-movetool.png</span>
+        <br><span class="type-text">icon-paintbucket.png</span>
+        <br><span class="type-text">icon-formatpainter.png</span></p>
+
+    <h1>Sidebar Elements</h1>
+    <p>Other than images, there are few different things that can live in the sidebar of the manual. Right now, we can add notes and keyboard shortcuts.</p>
+
+    <h2>Notes</h2>
+    <p>A sidebar note can be used for adding tips, suggestions, or anything else that's useful information, but not crucial to the exercise. Sidebar notes are <span class="type-text">&lt;div&gt;</span> containers with a heading and text inside. You can also (optionally) add an image as well. The structure is shown below.</p>
+
+    <pre><code>&lt;!-- sidebar note example --&gt;
+&lt;div class = "sidebar-note"&gt;
+    &lt;h2&gt; Title of Note &lt;/h2&gt;
+    &lt;p&gt; Note text goes here &lt;/p&gt;
+    &lt;img src = "images/image-name.jpg"&gt;
+&lt;/div&gt;</code></pre>
+
+    <h2>Keyboard Shortcuts</h2>
+    <p>Keyboard shortcut boxes are handy to inform users of the quickest and most commonly used shortcuts for their program. Their formatting is a little more complicated than the rest, but they look really cool.</p>
+
+    <p>Inside the resources folder for each manual, is a folder named <span class="type-text">keyboard-icons</span>. This folder contains images of every single keyboard key for both Mac and Windows. Inside of the keyboard shortcut container, we will be referencing these different icons.</p>
+
+    <p>Here's an example keyboard shortcut element.</p>
+
+    <pre><code>&lt;!-- keyboard shortcut example --&gt;
+&lt;div class = "keyboard-shortcut"&gt;
+    &lt;h2&gt; Title of Shortcut &lt;/h2&gt;
+    &lt;p&gt; Description of shortcut &lt;/p&gt;
+    &lt;img src = "resources/keyboard-icons/icon-control"&gt;
+    &lt;img src = "resources/keyboard-icons/icon-alt"&gt;
+    &lt;img src = "resources/keyboard-icons/icon-delete"&gt;
+&lt;/div&gt;</code></pre>
+
+    <p>If you have multiple keyboard shortcuts you would like to share in the same container, <span class="highlight"> or you would like to specify differences between Mac and Windows shortcuts, you can use the <span class="type-text">&lt;h3&gt;</span> tag to add a label.</span>
+    </p>
+
+    <h1>Code Blocks</h1>
+
+    <p>Code blocks are used to display code of any sort. This includes JavaScript, HTML, CSS, Python, SQL, and a few others. When writing in code blocks, <span class="highlight">all whitespace and indentation is displayed.</span> So be careful with how you write your code inside the code block itself.</p>
+
+    <p>The code block uses two tags, the <span class="type-text">&lt;pre&gt;</span> and <span class="type-text">&lt;code&gt;</span> tags. Inside both of these tags is where you write whatever code snippet you wish to share.</p>
+
+    <pre><code>&lt;!-- code block example --&gt;
+&lt;pre&gt;&lt;code&gt;Everything written in here is displayed verbatim, 
+including whitespaces and indents.&lt;/code&gt;&lt;/pre&gt;</code></pre>
+
+
+
+    <h1>Saving and Exporting</h1>
+    <p>So you have this stunningly beautiful HTML file that you've spent hours working on. You're in love with it. And of course, you want to export it into its final form: a PDF. Well, to ensure consistency across manuals, there's a few steps we have to take to export this as a PDF exactly how we want it.</p>
+
+    <ol>
+        <li>
+            <p>Open up <span class="type-text">manual.html</span> in Google Chrome.</p>
+        </li>
+        <li>
+            <p>Go to <span class="type-text">File > Print</span>.</p>
+        </li>
+        <li>
+            <p>Change the destination to save as a PDF.</p>
+        </li>
+        <li>
+            <p>Under margins, choose custom. Then, <span class="highlight">manually set the margins to be <b>0.6in</b> on each side.</span></p>
+        </li>
+        <li>
+            <p>Under options, make sure "simplify page" is <b>unchecked</b>, "headers and footers" is <b>unchecked</b>, and "background graphics" is <b>checked</b>.</p>
+        </li>
+        <li>
+            <p>Hit that big blue save button and hopefully it looks right.</p>
+        </li>
+    </ol>
+
+    <h1>Best Practices</h1>
+    <p>The following section contains a serires of best pratices to use while editing an STS manual.</p>
+
+    <h2>Exercises and Instructions</h2>
+    <ul>
+        <li>
+            <p>Exercises should be less than 10 steps long. If an exercise is longer, create sub-steps by placing another instruction list inside of the first one.</p>
+        </li>
+        <li>
+            <p>Small, single-step instructions don't need an instruction list. An instruction list is only for a multiple-step exercise. For example, if I want to tell the user to open a file, I don't need an instruction list. I can highlight the text instead.</p>
+        </li>
+        <li>
+            <p>Don't be afraid of adding paragrahs of information to break up an exercise into smaller parts. If the majorithy of the manual is exercise steps, then we've done something wrong.</p>
+        </li>
+    </ul>
+
+    <h2>Utilizing Elements</h2>
+    <ul>
+        <li>
+            <p>The stylesheet allows for many different elements, including keyboard shortcuts, sidebar notes, icons, toolboxes, and much more. Make sure to actually utilize these features whenever you can!</p>
+        </li>
+        <li>
+            <p>With too many elements, a the manual may lose its visual appeal. Be sure to balance text, images, and other elements in an appealing way.</p>
+        </li>
+    </ul>
+
+    <!-- END MAIN CONTENT -->
+
+</body>
+
+</html>
