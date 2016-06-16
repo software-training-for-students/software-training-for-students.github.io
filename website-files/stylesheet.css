@@ -14,19 +14,31 @@ body {
 
 h1 {
     font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     font-size: 4em;
 }
 
 h2 {
     font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
 }
 
 h3 {
     font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
 }
 
 p {
     font-family: 'Lora', serif;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     font-size: 1em;
 }
 
@@ -100,6 +112,9 @@ header p {
     font-size: 1em;
     margin-top: 0.25em;
     font-family: "Ubuntu", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     font-style: italic;
 }
 
@@ -133,6 +148,9 @@ header p {
 
 .button a {
     font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 0.6em;
