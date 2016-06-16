@@ -77,8 +77,11 @@ header p {
 /* manual grid */
 
 .manual-grid-section {
-    margin-left: 2em;
-    margin-right: 2em;
+    max-width: 80em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+    padding-right: 2em;
     margin-top: 4em;
     text-align: center;
 }
@@ -101,7 +104,8 @@ header p {
 
 .manual-grid-item {
     width: 16em;
-    border: 2px solid lightgray;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
     border-radius: 1em;
     text-align: center;
     padding: 1.25em;
@@ -134,11 +138,6 @@ header p {
     width: 6.5em;
 }
 
-.manual-grid-item:hover {
-    background-color: #f7f7f7;
-    transition: 0.2s linear;
-}
-
 
 /* buttons */
 
@@ -163,7 +162,7 @@ header p {
     padding-bottom: 0.6em;
     color: white;
     border-radius: 1em;
-    background-color: #1AC5E8;
+    background-color: #BECED1;
 }
 
 .button a:hover {
