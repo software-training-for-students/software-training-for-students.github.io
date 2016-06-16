@@ -54,7 +54,7 @@ Good luck, and have fun!
         <img src="http://software-training-for-students.github.io/master-files/uwlogo.png">
         <p>Written, designed, and produced by:</p>
         <p>DoIT Software Training for Students</p>
-        <p><em>Last Updated XX/XX/XXXX</em></p>
+        <p><em>Last Updated 6/15/2016</em></p>
     </div>
 
     <!-- end front page -->
@@ -101,9 +101,6 @@ Good luck, and have fun!
             <p>Do not add your own CSS to the document. You are only allowed to use the features and funcitons outlined in this guide.</p>
         </li>
         <li>
-            <p>Do not edit any files inside the <span class="type-text">resources</span> folder in each manual.</p>
-        </li>
-        <li>
             <p>Feel free to download the manual files and edit them using Dreamweaver, or your own text editor. (Be careful, Dreamweaver likes to add its own custom CSS everywhere.)</p>
         </li>
         <li>
@@ -123,26 +120,54 @@ Good luck, and have fun!
             <p>The main HTML file containing the contents of the manual.</p>
         </li>
         <li>
-            <p>A resources folder containing the master files to make the manual function. Do not add, edit, or delete any files in this folder.</p>
+            <p>A keyboard icons folder containing a series of SVG files representing the most common keys that can be found on standard keyboards. They are intended for use with the keyboard shortcut element, discussed later in this document.</p>
         </li>
         <li>
             <p>A class files folder, used for storing any exercise files.</p>
         </li>
         <li>
-            <p>An images folder, containing all screenshots and icons that are referenced within the main HTML file.</p>
+            <p>An images folder, containing screenshots and icons that are referenced within the HTML.</p>
         </li>
     </ul>
 
     <p>Within the main HTML file, you'll find two comments, marking the beginning and end of the manual's main contents. You may only edit the HTML contained within these two comments. Outside the comments, there is important information that must be consistent across all manuals.</p>
 
-    <h2>The Resources Folder</h2>
-    <p>Just so you are aware, this section is not neccessary to know for manual editing. It is purely for informational purposes.</p>
-
-    <p>Inside of each manual folder, you'll find a folder called <span class="type-text">resources</span>. In this folder you'll find important files that are crucial to the creation of the stunningly beautiful and agile STS manuals. Here's an explanation of each of the important files.</p>
+    <h2>Manual Metadata</h2>
+    <p>The information in this section is not necessary to know for manual editing, it is merely for informational purposes only. In the <span class="type-text">&lt;head&gt;</span> of the <span class="type-text">manual.html</span> file, you will find metadata, links, and information required to make the manual function. Here is a list of functions performed by the head of the manual.</p>
 
     <ul>
         <li>
-            <p><b>The Master Stylesheet:</b> Titled as <span class="type-text">stylesheet.css</span>, this file contains the styling for ALL manuals. This stylesheet should be consistent across all manuals.</p>
+            <p>Sets page title</p>
+        </li>
+        <li>
+            <p>Provides meta description</p>
+        </li>
+        <li>
+            <p>Links to main stylehsheet</p>
+        </li>
+        <li>
+            <p>Links to and initializes code highlight script</p>
+        </li>
+        <li>
+            <p>Links to jQuery hosted by Google</p>
+        </li>
+        <li>
+            <p>Links to main JavaScript effects file</p>
+        </li>
+        <li>
+            <p>Imports custom fonts from Google Fonts</p>
+        </li>
+    </ul>
+    <p>Our manuals rely on resources that are stored outside of the manual's main folder. Our custom fonts and jQuery files are hosted by Google. Our master files (like the stylesheet, effects script, etc) are hosted in a GitHub repository controlled by STS. If Google or GitHub ever goes down, then our manuals crash and burn with them!</p>
+
+    <h2>Master Files</h2>
+    <p>If you ever get a chance to sneak around the STS GitHub repository, be sure to check out the <span class="type-text">master-files</span> folder. This folder contains the master CSS stylesheet, JavaScript files, and images that are linked to every manual. Be careful, editing one of these files will immidiatley change every manual instantaneously.</p>
+
+    <p>Here's an explanation of each of the important files.</p>
+
+    <ul>
+        <li>
+            <p><b>The Master Stylesheet:</b> Titled as <span class="type-text">stylesheet.css</span>, this file contains the styling for ALL manuals. It is very robust, and should only be handled by expert hands.</p>
         </li>
         <li>
             <p><b>The Highlighting Script:</b> Titled as <span class="type-text">code-highlight-script.js</span>, this file contains the JavaScript neccessary to automatically add color to code blocks used within the manuals.</p>
@@ -150,10 +175,9 @@ Good luck, and have fun!
         <li>
             <p><b>The Effects Script:</b> Titled as <span class="type-text">effects.js</span>, this file contains any other JavaScript effects we wish to add to the manuals. Right now, it automatically generates the topics outline at the beginning of each manual, and nothing else.</p>
         </li>
-        <li>
-            <p><b>Keyboard Icons Folder:</b> Titled as <span class="type-text">keyboard-icons</span>, this folder contains a series of SVG files representing the most common keys that can be found on Mac and Windows standard keyboards. They are intended for use with the keyboard shortcut element, however you may reference and use them anywhere you like.</p>
-        </li>
     </ul>
+
+    <p>Alright, now that you've got a bit of background knowledge on the inner workings of our manuals, let's get to the fun stuff!</p>
 
 
     <h1>Essential Elements</h1>
@@ -461,7 +485,7 @@ Good luck, and have fun!
     <h2>Keyboard Shortcuts</h2>
     <p>Keyboard shortcut boxes are handy to inform users of the quickest and most commonly used shortcuts for their program. Their formatting is a little more complicated than the rest, but they look really cool.</p>
 
-    <p>Inside the resources folder for each manual, is a folder named <span class="type-text">keyboard-icons</span>. This folder contains images of every single keyboard key for both Mac and Windows. Inside of the keyboard shortcut container, we will be referencing these different icons.</p>
+    <p>Inside each manual folder, is a folder named <span class="type-text">keyboard-icons</span>. This folder contains images of every single keyboard key for both Mac and Windows. Inside of the keyboard shortcut element, we will be referencing these different icons.</p>
 
     <p>Here's an example keyboard shortcut element.</p>
 
@@ -469,9 +493,9 @@ Good luck, and have fun!
 &lt;div class = "keyboard-shortcut"&gt;
     &lt;h2&gt; Title of Shortcut &lt;/h2&gt;
     &lt;p&gt; Description of shortcut &lt;/p&gt;
-    &lt;img src = "resources/keyboard-icons/icon-control"&gt;
-    &lt;img src = "resources/keyboard-icons/icon-alt"&gt;
-    &lt;img src = "resources/keyboard-icons/icon-delete"&gt;
+    &lt;img src = "keyboard-icons/icon-control"&gt;
+    &lt;img src = "keyboard-icons/icon-alt"&gt;
+    &lt;img src = "keyboard-icons/icon-delete"&gt;
 &lt;/div&gt;</code></pre>
 
     <p>If you have multiple keyboard shortcuts you would like to share in the same container, <span class="highlight"> or you would like to specify differences between Mac and Windows shortcuts, you can use the <span class="type-text">&lt;h3&gt;</span> tag to add a label.</span>
