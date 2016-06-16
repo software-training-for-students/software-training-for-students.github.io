@@ -1,0 +1,154 @@
+/* CSS Reset */
+
+* {
+    margin: 0em;
+    padding: 0em;
+}
+
+
+/* essential elements */
+
+body {
+    background-color: white;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 4em;
+}
+
+h2 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h3 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+p {
+    font-family: 'Lora', serif;
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: #1AC5E8;
+}
+
+a:hover {
+    color: #FF739C;
+    transition: 0.1s linear;
+}
+
+@media screen and (max-width: 45em) {
+    h1 {
+        font-size: 2em;
+    }
+}
+
+
+/* header */
+
+header {
+    text-align: center;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+header p {
+    margin-top: 1em;
+}
+
+
+/* manual grid */
+
+.manual-grid-section {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 4em;
+    text-align: center;
+}
+
+@media screen and (max-width: 45em) {
+    .manual-grid-section {
+        margin-left: 0em;
+        margin-right: 0em;
+    }
+}
+
+
+/* manual grid item */
+
+.manual-grid-item {
+    width: 16em;
+    border: 2px solid lightgray;
+    border-radius: 1em;
+    text-align: center;
+    padding: 1.25em;
+    display: inline-block;
+    margin: 0.5em;
+}
+
+.manual-grid-item h2 {
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+
+.manual-grid-item .tagline {
+    font-size: 1em;
+    margin-top: 0.25em;
+    font-family: "Ubuntu", sans-serif;
+    font-style: italic;
+}
+
+.manual-grid-item .description {
+    margin-top: 0.75em;
+    height: 5em;
+    color: #adadad;
+}
+
+.manual-grid-item img {
+    width: 6.5em;
+}
+
+.manual-grid-item:hover {
+    background-color: #f7f7f7;
+    transition: 0.2s linear;
+}
+
+
+/* buttons */
+
+.button {
+    margin-top: 1.5em;
+}
+
+.button p {
+    display: inline;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+.button a {
+    font-family: 'Ubuntu', sans-serif;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    color: white;
+    border-radius: 1em;
+    background-color: #1AC5E8;
+}
+
+.button a:hover {
+    background-color: #FF739C;
+    transition: 0.1s linear;
+}
+
+.button img {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
+}
