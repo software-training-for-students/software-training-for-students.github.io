@@ -153,7 +153,7 @@ ol li::before {
 }
 
 #coverpage-title h1 {
-    font-size: 3.5em;
+    font-size: 3.75em;
     padding: 0.2em;
     margin: 0em;
     border: none;
@@ -257,6 +257,7 @@ h2 {
 /* regular title font */
 
 h3,
+#coverpage-title h2,
 #coverpage-description p,
 .toolbox p,
 #outline p,
