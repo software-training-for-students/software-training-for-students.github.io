@@ -8,8 +8,14 @@ $(document).ready(function () {
     The code below automatically updates this date whenever the manual is edited.
     */
 
+    // retreive current date
     var date = new Date();
-    $("#current-date").append("Last Updated " + date.getMonth() + 1 + "/" + date.getDay() + "/" + date.getYear());
+    var month = date.getMonth() + 1
+    var day = date.getDate();
+    var year = date.getYear();
+
+    // insert date
+    $("#current-date").append("<em>Last Updated " + month + "/" + day + "/" + year + "</em>");
 
     /* 
     END CURRENT DATE GENERATOR
