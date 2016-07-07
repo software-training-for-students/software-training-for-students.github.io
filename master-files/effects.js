@@ -12,7 +12,7 @@ $(document).ready(function () {
     var date = new Date();
     var month = date.getMonth() + 1
     var day = date.getDate();
-    var year = date.getYear();
+    var year = date.getFullYear();
 
     // insert date
     $("#current-date").append("<em>Last Updated " + month + "/" + day + "/" + year + "</em>");
