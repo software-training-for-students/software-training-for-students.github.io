@@ -7,7 +7,7 @@ $(document).ready(function () {
     If you would like to change any details about this about page, you can edit the page here.
     */
 
-    var aboutContent = "<p>Software Training for Students is an organization on campus that provides free software training to all students and faculty. Our services include custom workshops, open-enrollment classes, one-on-one project help, and access to Lynda.com. For more information on the Software Training for Students (STS) program, visit our website at <b><a href = 'http://wisc.edu/sts'>wisc.edu/sts</a></b>.</p> < div class = 'full-width-image' > < img src = 'http://software-training-for-students.github.io/master-files/sts-services.png' > < /div>";
+    var aboutContent = "<p>Software Training for Students is an organization on campus that provides free software training to all students and faculty. Our services include custom workshops, open-enrollment classes, one-on-one project help, and access to Lynda.com. For more information on the Software Training for Students (STS) program, visit our website at <b><a href = 'http://wisc.edu/sts'>wisc.edu/sts</a></b>.</p> <div class = 'full-width-image'><img src = 'http://software-training-for-students.github.io/master-files/sts-services.png'></div>";
     $("#about-page").append(aboutContent);
 
     /* 
