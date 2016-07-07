@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     // retreive current date
     var date = new Date();
-    var month = date.getMonth() + 1
+    var month = date.getMonth() + 1;
     var day = date.getDate();
     var year = date.getFullYear();
 
@@ -57,7 +57,7 @@ $(document).ready(function () {
     */
 
     // create variable to hold string containing table of contents
-    var outline = "<ol>"
+    var outline = "<ol>";
 
     // create counter to ignore first three <h1> tags
     var ignoreNumber = 3;
@@ -66,7 +66,7 @@ $(document).ready(function () {
     $("h1").each(function () {
 
         // ignore unneccesarry <h1> tags
-        if (ignoreNumber == 0) {
+        if (ignoreNumber === 0) {
 
             // retrieve text inside h1 element
             var title = $(this).text();
@@ -82,7 +82,7 @@ $(document).ready(function () {
     });
 
     // add closing tag to toc
-    outline += "</ol>"
+    outline += "</ol>";
 
     // inject string into html
     $("#outline").append(outline);
