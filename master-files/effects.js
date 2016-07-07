@@ -1,6 +1,30 @@
 // wait for document to fully load
 $(document).ready(function () {
 
+
+    /* 
+    BEGIN CURRENT DATE GENERATOR
+    On the front page of each manual, you will find a date in which the manual was last updated.
+    The code below automatically updates this date whenever the manual is edited.
+    */
+
+    var date = new Date();
+    $("#current-date").append("Last Updated " + date.getMonth() + 1 + "/" + date.getDay() + "/" + date.getYear());
+
+    /* 
+    END CURRENT DATE GENERATOR
+    */
+
+    // string containing about page contents
+    var aboutContent = "<p>Software Training for Students is an organization on campus that provides free software training to all students and faculty. Our services include custom workshops, open-enrollment classes, one-on-one project help, and access to Lynda.com. For more information on the Software Training for Students (STS) program, visit our website at <b><a href = 'http://wisc.edu/sts'>wisc.edu/sts</a></b>.</p><div class = 'full-width-image'><img src = 'http://software-training-for-students.github.io/master-files/sts-services.png'></div><p>STS is part of the Division of Information Technology (DoIT) - Academic Technology at UW-Madison. For more information regarding DoIT Academic Technology, visit <b><a href = 'https://at.doit.wisc.edu/'>at.doit.wisc.edu</a></b>.</p><p><b>&copy; University of Wisconsin Board of Regents.</b></p><p>This manual and any accompanying files were developed for use by current students at the University of Wisconsin-Madison. The names of software products referred to in these materials are claimed as trademarks of their respective companies or trademark holder.</p><p>If you are not a current member of the UW-Madison community and would like to use STS materials for self-study or to teach others, please contact sts@doit.wisc.edu. Thank you.</p>";
+
+    // append string to manual
+    $("#about-page").append(aboutContent);
+
+    /* 
+    END ABOUT PAGE BUILDER
+    */
+
     /* 
     BEGIN ABOUT PAGE BUILDER
     The code below inserts the HTML containing the "About Software Training for Students" section of the manual.
@@ -8,7 +32,7 @@ $(document).ready(function () {
     */
 
     // string containing about page contents
-    var aboutContent = "<p>Software Training for Students is an organization on campus that provides free software training to all students and faculty. Our services include custom workshops, open-enrollment classes, one-on-one project help, and access to Lynda.com. For more information on the Software Training for Students (STS) program, visit our website at <b><a href = 'http://wisc.edu/sts'>wisc.edu/sts</a></b>.</p> <div class = 'full-width-image'><img src = 'http://software-training-for-students.github.io/master-files/sts-services.png'></div><p>STS is part of the Division of Information Technology (DoIT) - Academic Technology at UW-Madison. For more information regarding DoIT Academic Technology, visit <b><a href = 'https://at.doit.wisc.edu/'>at.doit.wisc.edu</a></b>.</p><p><b>&copy; University of Wisconsin Board of Regents.</b></p><p>This manual and any accompanying files were developed for use by current students at the University of Wisconsin-Madison. The names of software products referred to in these materials are claimed as trademarks of their respective companies or trademark holder.</p><p>If you are not a current member of the UW-Madison community and would like to use STS materials for self-study or to teach others, please contact sts@doit.wisc.edu. Thank you.</p>";
+    var aboutContent = "<p>Software Training for Students is an organization on campus that provides free software training to all students and faculty. Our services include custom workshops, open-enrollment classes, one-on-one project help, and access to Lynda.com. For more information on the Software Training for Students (STS) program, visit our website at <b><a href = 'http://wisc.edu/sts'>wisc.edu/sts</a></b>.</p><div class = 'full-width-image'><img src = 'http://software-training-for-students.github.io/master-files/sts-services.png'></div><p>STS is part of the Division of Information Technology (DoIT) - Academic Technology at UW-Madison. For more information regarding DoIT Academic Technology, visit <b><a href = 'https://at.doit.wisc.edu/'>at.doit.wisc.edu</a></b>.</p><p><b>&copy; University of Wisconsin Board of Regents.</b></p><p>This manual and any accompanying files were developed for use by current students at the University of Wisconsin-Madison. The names of software products referred to in these materials are claimed as trademarks of their respective companies or trademark holder.</p><p>If you are not a current member of the UW-Madison community and would like to use STS materials for self-study or to teach others, please contact sts@doit.wisc.edu. Thank you.</p>";
 
     // append string to manual
     $("#about-page").append(aboutContent);
