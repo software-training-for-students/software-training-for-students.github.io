@@ -6,18 +6,18 @@
 
 WELCOME USER! You've reached the source code for a manual made by STS. If you plan on updating or editing this manual in any way, PLEASE read the guide on how to edit STS manuals. If you don't plan on editing this manual, then what are you doing here? 
 
-Please adhere to strictly to the guide when editing this document. It helps keep everything organized and working nicely. (It also helps to have a bit of HTML experience.)
+Please adhere to strictly to the guide when editing this document. It helps keep everything organized and working nicely. (It also helps to have HTML experience.)
 
 So, before you get started, here's a few quick notes:
-* Do not touch the head of this document, only the body portion
-* Don't forget to add tags/classes to their proper elements
+* Do not touch the head of this document, only the main content portion
+* Read through the entire manual editing guide, and become best friends with it
 
 Good luck, and have fun!
 
 -->
 
     <!-- page title -->
-    <title>Sample Manual</title>
+    <title>sample-manual</title>
 
     <!-- meta tags -->
     <meta charset="utf-8">
@@ -54,9 +54,8 @@ Good luck, and have fun!
         <img src="http://software-training-for-students.github.io/master-files/uwlogo.png">
         <p>Written, designed, and produced by:</p>
         <p>DoIT Software Training for Students</p>
-        <p><em>Last Updated XX/XX/XXXX</em></p>
+        <p id="current-date"></p>
     </div>
-
     <!-- end front page -->
 
     <!-- page break -->
@@ -64,14 +63,7 @@ Good luck, and have fun!
 
     <!-- begin about page -->
     <h1 class="no-top-margin">About Software Training for Students</h1>
-    <p>Software Training for Students is an organization on campus that provides free software training to all students and faculty. Our services include custom workshops, open-enrollment classes, one-on-one project help, and access to Lynda.com. For more information on the Software Training for Students (STS) program, visit our website at <b><a href = "http://wisc.edu/sts">wisc.edu/sts</a></b>.</p>
-    <div class="full-width-image"><img src="http://software-training-for-students.github.io/master-files/sts-services.png"></div>
-    <p>STS is part of the Division of Information Technology (DoIT) - Academic Technology at UW-Madison. For more information regarding DoIT Academic Technology, visit <b><a href = "https://at.doit.wisc.edu/">at.doit.wisc.edu</a></b>.</p>
-
-    <p><b>&copy; University of Wisconsin Board of Regents.</b></p>
-
-    <p>This manual and any accompanying files were developed for use by current students at the University of Wisconsin-Madison. The names of software products referred to in these materials are claimed as trademarks of their respective companies or trademark holder.</p>
-    <p>If you are not a current member of the UW-Madison community and would like to use STS materials for self-study or to teach others, please contact sts@doit.wisc.edu. Thank you.</p>
+    <div id="about-page"></div>
     <!-- end about page -->
 
     <!-- page break -->
@@ -79,9 +71,7 @@ Good luck, and have fun!
 
     <!-- begin outline -->
     <h1 class="no-top-margin">Topics Outline</h1>
-    <div id="outline">
-
-    </div>
+    <div id="outline"></div>
     <!-- end outline -->
 
     <!-- page break -->
@@ -260,10 +250,6 @@ function bounce() {
     console.log("This code means nothing");
 }</code></pre>
     <!-- END MAIN CONTENT -->
-    <!-- BEGIN TESTING GROUNDS -->
-    <!-- END TESTING GROUNDS -->
-
-
 
 </body>
 
