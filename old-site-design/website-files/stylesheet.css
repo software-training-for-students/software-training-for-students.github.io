@@ -81,9 +81,14 @@ header p {
     margin-right: auto;
     padding-left: 2em;
     padding-right: 2em;
-    column-count: 2;
-    column-gap: 1em;
-    margin-top: 4em;
+    margin-top: 5em;
+    text-align: center;
+}
+
+.manual-grid-section h1 {
+    font-size: 1.75em;
+    font-style: italic;
+    margin-bottom: 0.5em;
 }
 
 @media screen and (max-width: 45em) {
@@ -93,60 +98,50 @@ header p {
     }
 }
 
-@media screen and (max-width: 60em) {
-    .manual-grid-section {
-        column-count: 1;
-    }
-}
-
 
 /* manual grid item */
 
 .manual-grid-item {
-    width: 100%;
+    width: 16em;
     background-color: #f7f7f7;
+    border: 1px solid #ededed;
+    border-radius: 1em;
+    text-align: center;
+    padding: 1.25em;
     display: inline-block;
-    margin-bottom: 1em;
+    margin: 0.5em;
 }
 
 .manual-grid-item h2 {
-    margin-top: 0.75em;
+    margin-top: 1em;
     font-size: 1.5em;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
 }
 
 .manual-grid-item .tagline {
     font-size: 1em;
-    margin-top: 0.1em;
+    margin-top: 0.25em;
     font-family: "Ubuntu", sans-serif;
     font-weight: normal;
     font-style: normal;
     font-variant: normal;
     font-style: italic;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
 }
 
 .manual-grid-item .description {
-    margin-top: 0.5em;
+    margin-top: 0.75em;
+    height: 5em;
     color: #adadad;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
 }
 
 .manual-grid-item img {
     width: 6.5em;
-    margin: 1em;
-    float: left;
 }
 
 
 /* buttons */
 
 .button {
-    margin: 1em;
-    float: right;
+    margin-top: 1.5em;
 }
 
 .button p {
@@ -160,12 +155,12 @@ header p {
     font-weight: normal;
     font-style: normal;
     font-variant: normal;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
     color: white;
-    border-radius: 0.25em;
+    border-radius: 1em;
     background-color: #BECED1;
 }
 
