@@ -10,6 +10,9 @@
 
 body {
     background-color: white;
+    max-width: 82em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
@@ -25,6 +28,13 @@ h2 {
     font-weight: normal;
     font-style: normal;
     font-variant: normal;
+    font-size: 2.5em;
+    border-bottom: 2px solid #EDEDED;
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    padding-bottom: 0.25em;
 }
 
 h3 {
@@ -56,6 +66,9 @@ a:hover {
     h1 {
         font-size: 2em;
     }
+    h2 {
+        font-size: 1.5em;
+    }
 }
 
 
@@ -76,20 +89,21 @@ header p {
 /* manual grid */
 
 .manual-grid-section {
-    max-width: 80em;
     margin-left: auto;
     margin-right: auto;
     padding-left: 2em;
     padding-right: 2em;
     column-count: 2;
     column-gap: 1em;
-    margin-top: 4em;
 }
 
 @media screen and (max-width: 45em) {
     .manual-grid-section {
         padding-left: 0em;
         padding-right: 0em;
+    }
+    .manual-grid-item {
+        border-radius: 0;
     }
 }
 
@@ -107,9 +121,10 @@ header p {
     background-color: #f7f7f7;
     display: inline-block;
     margin-bottom: 1em;
+    border-radius: 0.25em;
 }
 
-.manual-grid-item h2 {
+.manual-grid-item h3 {
     margin-top: 0.75em;
     font-size: 1.5em;
     margin-left: 1.5em;
