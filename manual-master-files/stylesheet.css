@@ -96,6 +96,7 @@ p {
 a {
     color: #1AC5E8;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
@@ -106,6 +107,7 @@ a:hover {
 @media print {
     a {
         color: black;
+        font-weight: normal;
     }
 }
 
