@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Ubuntu:400,300italic,300,400italic,500,500italic,700,700italic|Lora:400,400italic,700,700italic');
+
 /* ==========================================================================
 
     HELLO USER! Welcome to the master stylehsheet used to edit STS Manuals.
@@ -14,10 +16,6 @@
 /* SECTION 1: full document management and essential elements
    ========================================================================== */
 
-
-/* import from Google Fonts */
-
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Ubuntu:400,300italic,300,400italic,500,500italic,700,700italic|Lora:400,400italic,700,700italic');
 
 /* CSS reset */
 
