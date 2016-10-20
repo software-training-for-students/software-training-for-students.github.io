@@ -60,8 +60,9 @@ Good luck, and have fun!
     <!-- BEGIN MAIN CONTENT -->
     <h1 class="no-top-margin">Introduction</h1>
     <p>Software manuals written by Software Training for Students are used all over campus to teach trainers, faculty, and students alike. They are structured and designed with HTML, CSS, and JavaScript. However, to edit the manuals, you only need a bit of knowledge with HTML.</p>
-    <p>Each manual exists as an editable HTML file. This HTML file is linked to a single master CSS file which provides formatting for all the manuals. Likewise, each manual is linked to a series of JavaScript files, provides features like an automated table of contents.</p>
+    <p>Each manual exists as an editable HTML file. This HTML file is linked to a single master CSS file which provides formatting for all the manuals. Likewise, each manual is linked to a series of JavaScript files, providing features like an automated table of contents.</p>
     <p>This handy little guide contains everything you possibly need to know about the structure of our manuals, how to edit them, and the best practices to keep in mind during the editing process. <span class="highlight">As long as you adhere to the guidelines defined by this manual, everything will be just fine.</span></p>
+    <p>The manual framework outlined in this document has been carefully crafted, with a strong attention to detail. If you are the person that has to take over this manual framework in the future, please take the time to throughly understand the project before making changes.</p>
     <p>A few things to keep in mind as you enter the wonderful world of manual editing:</p>
     <ul>
         <li>
@@ -77,19 +78,19 @@ Good luck, and have fun!
     <p>Editing manuals can be a pretty dry task. There's not really any way around that. I would reccommend putting on some good electronic or deep house music while working, at least that's what I do to make it through. I also talk to Trevor, he's a nice guy. </p>
     <h1>File Structure</h1>
     <h2>Basic Manual Structure</h2>
-    <p>Each manual is a series of files, self-contained within a single folder. Inside the folder, you should find the following things:</p>
+    <p>Each manual is a series of files, self-contained within a single folder. Inside the folder, you should find the following files:</p>
     <ul>
         <li>
             <p>The main HTML file containing the contents of the manual.</p>
         </li>
         <li>
-            <p>A keyboard icons folder containing a series of SVG files representing the most common keys that can be found on standard keyboards. They are intended for use with the keyboard shortcut element, discussed later in this document.</p>
+            <p>A <span class = "type-text">keyboard-icons</span> folder containing a series of images of commonly used keys on a keyboard. These images are referenced in a manual in a manual when explaining a keyboard shortcut.</p>
         </li>
         <li>
-            <p>A class files folder, used for storing any exercise files.</p>
+            <p>A class files folder, used for storing any exercise files that the user must download.</p>
         </li>
         <li>
-            <p>An images folder, containing screenshots and icons that are referenced within the HTML.</p>
+            <p>An images folder, containing screenshots and icons that are referenced within the manual.</p>
         </li>
     </ul>
     <p>Within the main HTML file, you'll find two comments, marking the beginning and end of the manual's main contents. You may only edit the HTML contained within these two comments. Outside the comments, there is important information that must be consistent across all manuals.</p>
