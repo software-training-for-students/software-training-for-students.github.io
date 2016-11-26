@@ -84,7 +84,7 @@ Good luck, and have fun!
             <p>The main HTML file containing the contents of the manual.</p>
         </li>
         <li>
-            <p>A <span class = "type-text">keyboard-icons</span> folder containing a series of images of commonly used keys on a keyboard. These images are referenced in a manual in a manual when explaining a keyboard shortcut.</p>
+            <p>A <span class="type-text">keyboard-icons</span> folder containing a series of images of commonly used keys on a keyboard. These images are referenced in a manual in a manual when explaining a keyboard shortcut.</p>
         </li>
         <li>
             <p>A class files folder, used for storing any exercise files that the user must download.</p>
@@ -93,7 +93,8 @@ Good luck, and have fun!
             <p>An images folder, containing screenshots and icons that are referenced within the manual.</p>
         </li>
     </ul>
-    <p>Within the main HTML file, you'll find two comments, marking the beginning and end of the manual's main contents. You may only edit the HTML contained within these two comments. Outside the comments, there is important information that must be consistent across all manuals.</p>
+    <p>Within the main HTML file, you'll find two comments, marking the beginning and end of the manual's main contents. <span class="highlight">You may only edit the HTML contained within these two comments.</span> Outside the comments, there is important information that must be consistent across all manuals.</p>
+    <div class="centered-image-medium"><img src="images/file-structure-1.png"></div>
     <h2>Manual Metadata</h2>
     <p>The information in this section is not necessary to know for manual editing, it is merely for informational purposes only. In the <span class="type-text">&lt;head&gt;</span> of the <span class="type-text">manual.html</span> file, you will find metadata, links, and information required to make the manual function. Here is a list of functions performed by the head of the manual.</p>
     <ul>
@@ -107,31 +108,28 @@ Good luck, and have fun!
             <p>Links to main stylehsheet</p>
         </li>
         <li>
-            <p>Links to and initializes code highlight script</p>
+            <p>Links to and initializes code highlight scripts</p>
         </li>
         <li>
             <p>Links to jQuery hosted by Google</p>
         </li>
         <li>
-            <p>Links to main JavaScript effects file</p>
-        </li>
-        <li>
-            <p>Imports custom fonts from Google Fonts</p>
+            <p>Links to main JavaScript functions file</p>
         </li>
     </ul>
-    <p>Our manuals rely on resources that are stored outside of the manual's main folder. Our custom fonts and jQuery files are hosted by Google. Our master files (like the stylesheet, effects script, etc) are hosted in a GitHub repository controlled by STS. If Google or GitHub ever goes down, then our manuals crash and burn with them!</p>
+    <p>Our manuals rely on resources that are stored outside of the manual's main folder. Our custom fonts and jQuery files are hosted by Google. Our master files (like the stylesheet, effects script, etc) are hosted in a GitHub repository controlled by STS. If Google or GitHub ever goes down, then our manuals crash and burn with them! (But let's be honest, if Google goes down, then a lot of other people are in trouble too.)</p>
     <h2>Master Files</h2>
     <p>If you ever get a chance to sneak around the STS GitHub repository, be sure to check out the <span class="type-text">master-files</span> folder. This folder contains the master CSS stylesheet, JavaScript files, and images that are linked to every manual. Be careful, editing one of these files will immidiatley change every manual instantaneously.</p>
-    <p>Here's an explanation of each of the important files.</p>
+    <p>Here's an explanation of each of the important files in this repository.</p>
     <ul>
         <li>
-            <p><strong>The Master Stylesheet:</strong> Titled as <span class="type-text">stylesheet.css</span>, this file contains the styling for ALL manuals. It is very robust, and should only be handled by expert hands.</p>
+            <p><strong>Master Stylesheet:</strong> Titled as <span class="type-text">stylesheet.css</span>, this file contains the styling for ALL manuals. It is very robust, and should only be handled by expert hands.</p>
         </li>
         <li>
-            <p><strong>The Highlighting Script:</strong> Titled as <span class="type-text">code-highlight-script.js</span>, this file contains the JavaScript neccessary to automatically add color to code blocks used within the manuals.</p>
+            <p><strong>Highlighting Scripts:</strong> A series of JavaScript files that provide syntax highlighting for code blocks in manuals. Each manual is linked to a different code highlighting script, depending on its needs.</p>
         </li>
         <li>
-            <p><strong>The Effects Script:</strong> Titled as <span class="type-text">effects.js</span>, this file contains any other JavaScript effects we wish to add to the manuals. It automatically generates the topics outline, inserts the current date, and builds the about page.</p>
+            <p><strong>Functions Script:</strong> Titled as <span class="type-text">primary-functions.js</span>, this JavaScript file will automatically generate a table of contents, about page, and a few other necessities required for each manual. It also has a few surprises if you snoop around the code.</p>
         </li>
     </ul>
     <p>Alright, now that you've got a bit of background knowledge on the inner workings of our manuals, let's get to the fun stuff!</p>
@@ -203,7 +201,16 @@ Good luck, and have fun!
         </li>
     </ul>
     <h2>Toolbox and Tool Icons</h2>
-    <p>A <strong>toolbox</strong> contains a list of tools being introduced to the user. Each tool has a small icon with an image of that tool, along with the tool name and a brief description. Here is an example of a toolbox with two tools listed.</p> <pre><code>&lt;!-- toolbox example --&gt;
+    <p>A <strong>toolbox</strong> contains a list of tools being introduced to the user. Each tool has a small icon with an image of that tool, along with the tool name and a brief description. Below is a preview of what a toolbox looks like in a manual.</p>
+    <div class="toolbox">
+        <div> <img src="images/icon-bucket.png">
+            <p><strong>Bucket Tool:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget aliquam lacus, sit amet porta justo. Vivamus lacinia tincidunt tempor. </p>
+        </div>
+        <div> <img src="images/icon-lollipop.png">
+            <p><strong>Lollipop Tool:</strong> Sed ac facilisis tellus. Suspendisse ac facilisis lacus, in venenatis justo. Sed laoreet ultricies ultrices.</p>
+        </div>
+    </div>
+    <p>This example only has two tools listed, but you may feel free to list as many or as few as you like. Here is the code used to make a tool box:</p> <pre><code>&lt;!-- toolbox example --&gt;
 &lt;div class = "toolbox"&gt;
     &lt;div&gt;
         &lt;img src = "images/icon-name.jpg"&gt;
@@ -213,12 +220,32 @@ Good luck, and have fun!
         &lt;img src = "images/icon-name.jpg"&gt;
         &lt;p&gt;&lt;strong&gt; Tool Name: &lt;/strong&gt; A brief description of the tool. &lt;/p&gt;
     &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-    <p>Finally, <strong>tool icons</strong> are small circular placed in the sidebar. They are helpful for referencing specific buttons or tools during the exercise or instructions.</p> <pre><code>&lt;!-- tool icon example --&gt;
+&lt;/div&gt;</code></pre> <img class="sidebar-icon" src="images/icon-bucket.png">
+    <p>Finally, <strong>tool icons</strong> are small circular placed in the sidebar. (See the example to the right.) They are helpful for referencing specific buttons or tools during the exercise or instructions. Feel free to use them frequently; they often help clarify exercise instructions.</p> <pre><code>&lt;!-- tool icon example --&gt;
 &lt;img class = "sidebar-icon" src = "images/icon-name.jpg"&gt;</code></pre>
     <p>Please note, when taking screenshots of tools and buttons, <span class="highlight">make sure the image is proportionally square.</span> If not, the screenshot will become distored.</p>
     <h2>Instruction Lists</h2>
-    <p>Instruction lists are specially styled lists used to walk users through an example or exercise. They are styled to be more visually appealing easier to follow. Do not confuse these with regular lists; they serve different purposes. These lists are <em>only</em> to be used with giving step-by-step instructions.</p>
+    <p>Instruction lists are specially styled lists used to walk users through an example or exercise. They are styled to be more visually appealing and easier to follow. <span class="highlight">Do not confuse these with regular lists; they serve different purposes.</span> These lists are <em>only</em> to be used with giving step-by-step instructions.</p>
+    <p>This is what an instruction list looks like:</p>
+    <ol class="instruction-list">
+        <li>
+            <p>This is the first step of my exercise.</p>
+        </li>
+        <li>
+            <p>The second step of my exercise goes here.</p>
+            <ol class="instruction-list">
+                <li>
+                    <p>Oh look! A sub-instruction.</p>
+                </li>
+                <li>
+                    <p>Feel free to use these if a certain step may be too complicated for some readers.</p>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <p>The third and final step in my exercise.</p>
+        </li>
+    </ol>
     <p>The use the instruction list, simply add the <span class="type-text">instruction-list</span> class to your <span class="type-text">&lt;ol&gt;</span> tag.</p> <pre><code>&lt;!-- instruction list example --&gt;
 &lt;ol class = "instruction-list"&gt;
     &lt;li&gt;&lt;p&gt; This is an item in my list &lt;/p&gt;&lt;/li&gt;
@@ -322,7 +349,7 @@ Good luck, and have fun!
             <th>Description</th>
         </tr>
         <tr>
-            <td><span class="type-text">side-image-small</span></td>
+            <td><span class="type-text">sidebyside-image-small</span></td>
             <td>Places two small images together, side by side.</td>
         </tr>
         <tr>
@@ -351,9 +378,6 @@ Good luck, and have fun!
         <li>
             <p>Screenshots of tool icons should have a square aspect ratio.</p>
         </li>
-        <li>
-            <p>Images should not exceed <strong>1200px</strong> in width.</p>
-        </li>
     </ul>
     <h2>Naming General Screenshots</h2>
     <p>The file name of each screenshot has three portions: a keyword assocating it to a specific section of the manual, a small description of what it shows, and an optional number if there are multiple screenshots of the same kind. A dash separates each section. Here's what the structure looks like:</p>
@@ -372,14 +396,31 @@ Good luck, and have fun!
     <h1>Sidebar Elements</h1>
     <p>Other than images, there are few different things that can live in the sidebar of the manual. Right now, we can add notes and keyboard shortcuts.</p>
     <h2>Notes</h2>
-    <p>A sidebar note can be used for adding tips, suggestions, or anything else that's useful information, but not crucial to the exercise. Sidebar notes are <span class="type-text">&lt;div&gt;</span> containers with a heading and text inside. You can also (optionally) add an image as well. The structure is shown below.</p> <pre><code>&lt;!-- sidebar note example --&gt;
+    <div class="sidebar-note">
+        <h2>Note Title Here</h2>
+        <p>Aenean rutrum nunc vitae quam tempus facilisis. Aliquam placerat vestibulum convallis.</p>
+        <ul>
+            <li>
+                <p>Proin ac tortor</p>
+            </li>
+            <li>
+                <p>Donec consequat</p>
+            </li>
+        </ul>
+    </div>
+    <p>A sidebar note can be used for adding tips, suggestions, or anything else that's useful information, but not crucial to the exercise. Sidebar notes are <span class="type-text">&lt;div&gt;</span> containers with a heading and paragraph text inside. You can optionally add images and lists as well.</p>
+    <p>When writing sidebar notes, <strong>please be brief</strong>. They are designed to be small and unintrusive.</p>
+    <p>For an example of a sidebar note, look to the right. Below is the HTML structure for writing one.</p> <pre><code>&lt;!-- sidebar note example --&gt;
 &lt;div class = "sidebar-note"&gt;
     &lt;h2&gt; Title of Note &lt;/h2&gt;
     &lt;p&gt; Note text goes here &lt;/p&gt;
     &lt;img src = "images/image-name.jpg"&gt;
 &lt;/div&gt;</code></pre>
     <h2>Keyboard Shortcuts</h2>
-    <p>Keyboard shortcut boxes are handy to inform users of the quickest and most commonly used shortcuts for their program. Their formatting is a little more complicated than the rest, but they look really cool.</p>
+    <div class="keyboard-shortcut">
+        <h2>Shortcut Title Here</h2>
+        <p>Duis id suscipit risus. Vivamus non ex molestie, condimentum.</p> <img src="keyboard-icons/icon-command.svg"> <img src="keyboard-icons/icon-delete.svg"> </div>
+    <p>Keyboard shortcuts are used to inform users of the quickest and most commonly used shortcuts for their program. They look similar to sidebar notes, with the addition of small graphics representing keys on a keyboard. Their formatting is a little more complicated than the rest, but they look really cool.</p>
     <p>Inside each manual folder, is a folder named <span class="type-text">keyboard-icons</span>. This folder contains images of every single keyboard key for both Mac and Windows. Inside of the keyboard shortcut element, we will be referencing these different icons.</p>
     <p>Here's an example keyboard shortcut element.</p> <pre><code>&lt;!-- keyboard shortcut example --&gt;
 &lt;div class = "keyboard-shortcut"&gt;
