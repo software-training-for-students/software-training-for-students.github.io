@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Ubuntu:400,300italic,300,400italic,500,500italic,700,700italic|Lora:400,400italic,700,700italic');
-
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 /* ==========================================================================
 
     HELLO USER! Welcome to the master stylehsheet used to edit STS Manuals.
@@ -22,6 +21,7 @@
 * {
     margin: 0em;
     padding: 0em;
+		font-family: 'Dancing Script', cursive !important;
 }
 
 
