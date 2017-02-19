@@ -17,16 +17,13 @@
    ========================================================================== */
 /* CSS reset */
 * {
-  margin: 0em;
-  padding: 0em; }
+  margin: 0;
+  padding: 0; }
 
 /* body */
 body {
-  padding-left: 2em;
-  padding-right: 2em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5em;
+  margin: 0 auto 5em auto;
+  padding: 0 2em 0 2em;
   max-width: 50em;
   min-width: 40em; }
 
@@ -35,11 +32,11 @@ body {
     padding: 0em; } }
 /* headings */
 h1 {
+  margin: 3em 0 0 0;
+  padding: 0 0 0.25em 0;
   font-size: 2.5em;
-  padding-bottom: 0.25em;
   border-bottom: 2px solid;
-  border-color: lightgray;
-  margin-top: 3em;
+  border-color: #ecf0f1;
   clear: both; }
 
 h2 {
@@ -63,7 +60,7 @@ h3 {
 p {
   margin-top: 1em;
   font-size: 1em;
-  line-height: 150%; }
+  line-height: 160%; }
 
 @media print {
   p {
@@ -81,62 +78,52 @@ a:hover {
 /* lists */
 ul,
 ol {
-  margin-left: 3em;
-  margin-top: 1em;
+  margin: 1em 0 0 3em;
   counter-reset: step-counter; }
-
-ul ul,
-ol ol {
-  margin-top: 0em; }
-
-ul p,
-ol p {
-  margin: 0em;
-  padding: 0em; }
-
-ul li,
-ol li {
-  margin: 0em;
-  padding: 0em; }
-
-ul li::before,
-ol li::before {
-  counter-increment: step-counter; }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin-top: 0; }
+  ul li,
+  ol li {
+    margin: 0;
+    padding: 0; }
+  ul li::before,
+  ol li::before {
+    counter-increment: step-counter; }
+  ul p,
+  ol p {
+    margin: 0;
+    padding: 0; }
 
 /* SECTION 2: front page and topics outline
    ========================================================================== */
 /* front page */
 #coverpage-title {
-  margin-top: 5em; }
-
-#coverpage-title,
-#coverpage-description {
+  margin-top: 5em;
   text-align: center; }
-
-#coverpage-title h1 {
-  font-size: 3.75em;
-  padding: 0.2em;
-  margin: 0em;
-  border: none; }
-
-#coverpage-title h2 {
-  padding: 0.25em;
-  margin: 0em; }
-
-#coverpage-title h3 {
-  margin: 0em;
-  padding: 0em;
-  font-size: 1.25em; }
+  #coverpage-title h1 {
+    font-size: 3.75em;
+    padding: 0.2em;
+    margin: 0;
+    border: none; }
+  #coverpage-title h2 {
+    padding: 0.25em;
+    margin: 0; }
+  #coverpage-title h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.25em; }
 
 #coverpage-description {
-  margin-top: 5em; }
-
-#coverpage-description p {
-  margin: 0em; }
-
-#coverpage-description img {
-  width: 12em;
-  padding: 1em; }
+  margin-top: 5em;
+  text-align: center; }
+  #coverpage-description p {
+    margin: 0; }
+  #coverpage-description img {
+    width: 12em;
+    padding: 1em; }
 
 @media print {
   #coverpage-description {
@@ -145,30 +132,26 @@ ol li::before {
 #outline {
   column-count: 2;
   margin-top: 1.5em; }
-
-#outline ol {
-  list-style-type: none;
-  margin-left: 1em;
-  margin-top: 0em; }
-
-#outline li {
-  page-break-inside: avoid;
-  height: 2em;
-  padding-bottom: 0.75em; }
-
-#outline ol li::before {
-  width: 1.25em;
-  padding: 0.4em;
-  text-align: center;
-  content: counter(step-counter);
-  border-radius: 100%;
-  color: white;
-  background-color: orange;
-  float: left; }
-
-#outline ol p {
-  margin-left: 2.75em;
-  padding-top: 0.2em; }
+  #outline ol {
+    list-style-type: none;
+    margin-left: 1em;
+    margin-top: 0em; }
+    #outline ol li::before {
+      width: 1.25em;
+      padding: 0.4em;
+      text-align: center;
+      content: counter(step-counter);
+      border-radius: 100%;
+      color: white;
+      background-color: orange;
+      float: left; }
+    #outline ol p {
+      margin-left: 2.75em;
+      padding-top: 0.2em; }
+  #outline li {
+    page-break-inside: avoid;
+    height: 2em;
+    padding-bottom: 0.75em; }
 
 @media print {
   #outline ol p {
@@ -214,8 +197,9 @@ ul li,
 ol li {
   font-family: "Lora", serif; }
 
-/* type text and code */
+/* type text, code, keyboard icons */
 code,
+kbd,
 .type-text {
   font-family: "Source Code Pro", serif; }
 
@@ -627,39 +611,34 @@ table {
   font-size: 1em;
   line-height: 150%;
   clear: both; }
-
-table td,
-table th {
-  padding: 0.75em;
-  border: 1px solid #f0f0f0; }
-
-table th {
-  background-color: #f0f0f0; }
+  table td,
+  table th {
+    padding: 0.75em;
+    border: 1px solid #f0f0f0; }
+  table th {
+    background-color: #f0f0f0; }
 
 @media print {
   table {
     font-size: 0.8em; }
-
-  table td,
-  table th {
-    padding: 0.5em; } }
+    table td,
+    table th {
+      padding: 0.5em; } }
 /* instruction lists */
 .instruction-list {
   list-style-type: none;
   margin-left: 1em; }
-
-.instruction-list li::before {
-  content: counter(step-counter);
-  border-radius: 100%;
-  color: white;
-  font-size: 1em;
-  padding: 3px 8px;
-  background-color: #2ecc71;
-  position: absolute; }
-
-.instruction-list p {
-  margin-left: 2.25em;
-  margin-top: 0.75em; }
+  .instruction-list li::before {
+    content: counter(step-counter);
+    border-radius: 100%;
+    color: white;
+    font-size: 1em;
+    padding: 3px 8px;
+    background-color: #2ecc71;
+    position: absolute; }
+  .instruction-list p {
+    margin-left: 2.25em;
+    margin-top: 0.75em; }
 
 @media print {
   .instruction-list li::before {
@@ -807,27 +786,21 @@ code {
   background-color: #f7f7f7;
   border-radius: 0.25em; }
 
+/* inline keyboard icons */
 kbd {
-  font-family: "Source Code Pro", serif;
-  font-size: 0.85em;
-  border: 2px solid;
-  border-color: #CCCCCC #AAAAAA #888888 #BBBBBB;
-  border-radius: 0.25em;
-  background-color: #f2f4f7;
-  border-width: 1px 1px 2px 2px;
-  padding: 1px; }
+  display: inline-block;
+  margin: 0 .1em;
+  padding: .1em .6em;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #242729;
+  text-shadow: 0 1px 0 #FFF;
+  background-color: #e1e3e5;
+  border: 1px solid #adb3b9;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #FFF inset;
+  white-space: nowrap; }
 
-/* inline keyboard icons 
-kbd {
-    background:#EEEEEE;
-    border-color:#CCCCCC #AAAAAA #888888 #BBBBBB;
-    border-style:solid;
-    border-width:1px 1px 2px 2px;
-    color:#000000;
-    padding:2px 1px;
-    white-space:nowrap;
-}
-*/
 /* highlighted text */
 .highlight,
 .highlight .type-text {
