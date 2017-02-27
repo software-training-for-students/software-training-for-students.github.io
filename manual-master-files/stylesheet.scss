@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Ubuntu:400,300italic,300,400italic,500,500italic,700,700italic|Lora:400,400italic,700,700italic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700|Source+Code+Pro');
+/* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Ubuntu:400,300italic,300,400italic,500,500italic,700,700italic|Lora:400,400italic,700,700italic'); */
 
 /* ==========================================================================
 
@@ -20,13 +21,17 @@
 /* DOCUMENT FONTS */
 
 // font used in heading elements and titles
-$heading-font: 'Ubuntu', sans-serif;
+// $heading-font: 'Ubuntu', sans-serif;
+$heading-font: 'Roboto', sans-serif;
 
 // font used in primary body text
-$body-font: 'Lora', serif;
+// $body-font: 'Lora', serif;
+$body-font: 'Roboto', sans-serif;
 
 // font used in inline type text and code blocks
 $fixed-width-font: 'Source Code Pro', serif;
+
+
 
 
 /* SECTION 1: full document management and essential elements
@@ -98,7 +103,7 @@ h3 {
 p {
     margin-top: 1em;
     font-size: 1em;
-    line-height: 160%;
+    line-height: 150%;
 }
 
 @media print {
