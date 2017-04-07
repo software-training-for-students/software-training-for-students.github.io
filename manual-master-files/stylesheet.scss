@@ -31,7 +31,6 @@ $body-font-weight: 400;
 $fixed-width-font: 'Roboto Mono',
 monospace;
 
-
 /* SECTION 1: full document management and essential elements
    ========================================================================== */
 
@@ -224,6 +223,7 @@ ol {
         page-break-inside: avoid;
     }
 }
+
 
 /* SECTION 3: image classes
    ========================================================================== */
@@ -872,8 +872,6 @@ kbd {
 
 
 /* highlighted text */
-
-
 /* also change type-text if it is highlighted */
 
 .highlight,
