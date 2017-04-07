@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,400i,900');
 
-
 /* ==========================================================================
 
     HELLO USER! Welcome to the master stylehsheet used to edit STS Manuals.
@@ -21,17 +20,16 @@
 /* DOCUMENT FONTS */
 
 // font used in heading elements and titles
-$heading-font-family: 'Roboto', sans-serif;
+$heading-font-family: 'Roboto',
+sans-serif;
 $heading-font-weight: 900;
-
 // font used in primary body text
-$body-font-family: 'Roboto', sans-serif;
+$body-font-family: 'Roboto',
+sans-serif;
 $body-font-weight: 400;
-
 // font used in inline type text and code blocks
-$fixed-width-font: 'Roboto Mono', monospace;
-
-
+$fixed-width-font: 'Roboto Mono',
+monospace;
 
 
 /* SECTION 1: full document management and essential elements
@@ -53,7 +51,6 @@ body {
     padding: 0 2em 0 2em;
     max-width: 50em;
     min-width: 40em;
-    
     @media print {
         padding: 0;
     }
@@ -71,7 +68,6 @@ h1 {
     font-weight: $heading-font-weight;
     font-size: 2.5em;
     clear: both;
-    
     @media print {
         margin: 1.75em 0 0 0;
         padding: 0 0 0.2em 0;
@@ -79,26 +75,24 @@ h1 {
     }
 }
 
-
 h2 {
     margin: 1.5em 0 0 0;
     padding: 0;
     font-family: $heading-font-family;
     font-weight: $heading-font-weight;
-    font-size: 1.75em;
-    font-weight: 400;
-    
+    font-size: 1.7em;
     @media print {
         margin: 1.25em 0 0 0;
-        font-size: 1.35em;
+        font-size: 1.5em;
     }
 }
 
 h3 {
-    font-family: $heading-font-family;
-    font-weight: $heading-font-weight;
     margin: 1.5em 0 0 0;
-    font-size: 1.5em;
+    font-family: $heading-font-family;
+    font-weight: $body-font-weight;
+    font-style: italic;
+    font-size: 1.25em;
 }
 
 
@@ -110,7 +104,6 @@ p {
     font-weight: $body-font-weight;
     font-size: 1em;
     line-height: 150%;
-    
     @media print {
         font-size: 0.8em;
     }
@@ -136,28 +129,23 @@ ul,
 ol {
     margin: 1em 0 0 3em;
     counter-reset: step-counter;
-    
     ul,
     ol {
         margin: 0 0 0 3em;
     }
-    
     li {
         margin: 0;
         padding: 0;
         font-family: $body-font-family;
         font-weight: $body-font-weight;
     }
-    
     li::before {
         counter-increment: step-counter;
     }
-    
     p {
         margin: 0;
         padding: 0;
     }
-    
 }
 
 
@@ -170,19 +158,16 @@ ol {
 #coverpage-title {
     margin: 5em 0 0 0;
     text-align: center;
-    
     h1 {
         margin: 0;
         padding: 0.2em;
         font-size: 3.75em;
         border: none;
     }
-    
     h2 {
         margin: 0;
         padding: 0.25em;
     }
-    
     h3 {
         margin: 0;
         padding: 0;
@@ -193,16 +178,14 @@ ol {
 #coverpage-description {
     margin: 5em 0 0 0;
     text-align: center;
-    
     p {
+        font-family: $heading-font-family;
         margin: 0;
     }
-    
     img {
         padding: 1em;
         width: 12em;
     }
-    
     @media print {
         margin: 24em 0 0 0;
     }
@@ -214,12 +197,12 @@ ol {
 #outline {
     margin: 1.5em 0 0 0;
     column-count: 2;
-    
     ol {
         margin: 0 0 0 1em;
         list-style-type: none;
-        
         li::before {
+            font-family: $heading-font-family;
+            font-weight: $heading-font-weight;
             width: 1.25em;
             padding: 0.4em;
             text-align: center;
@@ -229,13 +212,12 @@ ol {
             background-color: orange;
             float: left;
         }
-        
         p {
+            font-family: $heading-font-family;
             margin: 0 0 0 2.75em;
             padding: 0.2em 0 0 0;
         }
     }
-    
     li {
         padding: 0 0 0.75em 0;
         height: 2em;
@@ -243,55 +225,7 @@ ol {
     }
 }
 
-/* SECTION 3: font management
-   ========================================================================== */
-
-
-/* heavy bold title font */
-
-.instruction-list li::before,
-#outline li::before {
-    font-family: $heading-font-family;
-    font-weight: 700;
-}
-
-
-/* regular title font */
-
-#coverpage-description p,
-.toolbox p,
-#outline p,
-.centered-image-tiny p,
-.centered-image-small p,
-.centered-image-medium p,
-.centered-image-large p,
-.full-width-image p,
-.side-image-small p,
-.side-image-medium p,
-.side-image-large p,
-.sidebyside-image-small p,
-.sidebyside-image-large p {
-    font-family: $heading-font-family;
-}
-
-
-/* paragraph text */
-
-ul li,
-ol li {
-    font-family: $body-font-family;
-}
-
-
-/* type text, code, keyboard icons */
-
-kbd,
-.type-text {
-    font-family: $fixed-width-font;
-}
-
-
-/* SECTION 4: image classes
+/* SECTION 3: image classes
    ========================================================================== */
 
 
@@ -302,7 +236,6 @@ kbd,
     overflow: hidden;
     text-align: center;
     clear: both;
-    
     img {
         width: 98%;
         border-radius: 0.25em;
@@ -310,7 +243,7 @@ kbd,
 }
 
 @media print {
-    .full-width-image{
+    .full-width-image {
         img {
             width: 90%;
         }
@@ -327,14 +260,12 @@ kbd,
     margin-right: auto;
     text-align: center;
     clear: both;
-    
     img {
         width: 19.75em;
         margin: 0em;
         padding: 0em;
         border-radius: 0.25em;
     }
-    
     p {
         clear: both;
     }
@@ -347,14 +278,12 @@ kbd,
     margin-right: auto;
     text-align: center;
     clear: both;
-    
     img {
         width: 11.75em;
         margin: 0em;
         padding: 0em;
         border-radius: 0.25em;
     }
-    
     p {
         clear: both;
     }
@@ -363,15 +292,12 @@ kbd,
 @media print {
     .sidebyside-image-large {
         max-width: 36em;
-        
         img {
             width: 17.75em;
         }
     }
- 
     .sidebyside-image-small {
         max-width: 20em;
-        
         img {
             width: 9.75em;
         }
@@ -388,7 +314,6 @@ kbd,
     float: right;
     border-radius: 0.25em;
     clear: both;
-    
     img {
         width: 100%;
         border-radius: 0.25em;
@@ -401,7 +326,6 @@ kbd,
     margin-left: 1em;
     float: right;
     clear: both;
-    
     img {
         width: 100%;
         border-radius: 0.25em;
@@ -414,13 +338,11 @@ kbd,
     margin-left: 1em;
     float: right;
     clear: both;
-    
     img {
         width: 100%;
         border-radius: 0.25em;
     }
 }
-
 
 @media print {
     .side-image-large {
@@ -441,7 +363,6 @@ kbd,
     width: 100%;
     margin-top: 1em;
     text-align: center;
-    
     img {
         max-width: 36em;
         border-radius: 0.25em;
@@ -452,7 +373,6 @@ kbd,
     width: 100%;
     margin-top: 1em;
     text-align: center;
-    
     img {
         max-width: 24em;
         border-radius: 0.25em;
@@ -463,7 +383,6 @@ kbd,
     width: 100%;
     margin-top: 1em;
     text-align: center;
-    
     img {
         max-width: 14em;
         border-radius: 0.25em;
@@ -474,7 +393,6 @@ kbd,
     width: 100%;
     margin-top: 1em;
     text-align: center;
-    
     img {
         max-width: 8em;
         border-radius: 0.25em;
@@ -496,6 +414,7 @@ kbd,
     }
 }
 
+
 /* optional image borders */
 
 .border img {
@@ -506,7 +425,7 @@ kbd,
 }
 
 
-/* SECTION 5: sidebar elements
+/* SECTION 4: sidebar elements
    ========================================================================== */
 
 
@@ -521,7 +440,6 @@ kbd,
     border-radius: 0.5em;
     clear: both;
     overflow: hidden;
-    
     h2 {
         margin: 0;
         padding: 0.4em;
@@ -529,14 +447,12 @@ kbd,
         background-color: #f2fbff;
         text-align: center;
     }
-    
     img {
         width: 15em;
         margin: 0.25em 0.5em 0.5em 0.25em;
         border-radius: 0.25em;
         padding: 0em;
     }
-    
     p {
         padding: 0.75em;
         font-size: 0.85em;
@@ -552,7 +468,6 @@ kbd,
     margin: 0em;
     text-align: left;
 }
-
 
 @media print {
     .sidebar-note p,
@@ -594,7 +509,7 @@ kbd,
 }
 
 
-/* SECTION: toolbox and sidebar icons
+/* SECTION 5: toolbox and sidebar icons
    ========================================================================== */
 
 
@@ -637,7 +552,6 @@ kbd,
     padding-bottom: 0.75em;
     padding-left: 1.5em;
     padding-right: 1.5em;
-    
     img {
         width: 2.5em;
         height: 2.5em;
@@ -647,14 +561,13 @@ kbd,
         padding: 0.25em;
         float: left;
     }
-    
     p {
         margin-left: 3.75em;
         padding: 0em;
         margin-top: 0em;
+        font-family: $heading-font-family;
         font-size: 1em;
     }
-    
     div {
         min-height: 3em;
         margin-top: 0.35em;
@@ -669,16 +582,13 @@ kbd,
             height: 2em;
             padding: 0.25em;
         }
-        
         p {
             font-size: 0.85em;
         }
-        
         div {
             min-height: 2.5em;
         }
     }
-
 }
 
 
@@ -699,7 +609,6 @@ table {
     font-size: 1em;
     line-height: 150%;
     clear: both;
-    
     td,
     th {
         padding: 0.75em;
@@ -707,7 +616,6 @@ table {
         font-family: $body-font-family;
         font-weight: $body-font-weight;
     }
-    
     th {
         background-color: #f0f0f0;
     }
@@ -716,7 +624,6 @@ table {
 @media print {
     table {
         font-size: 0.8em;
-        
         td,
         th {
             padding: 0.5em;
@@ -730,8 +637,9 @@ table {
 .instruction-list {
     list-style-type: none;
     margin-left: 1em;
-    
     li::before {
+        font-family: $heading-font-family;
+        font-weight: $heading-font-weight;
         content: counter(step-counter);
         border-radius: 100%;
         color: white;
@@ -740,7 +648,6 @@ table {
         background-color: #2ecc71;
         position: absolute;
     }
-    
     p {
         margin-left: 2.25em;
         margin-top: 0.75em;
@@ -814,7 +721,7 @@ table {
 }
 
 
-/* SECTION 9: coloring code and formatting code blocks
+/* SECTION 7: coloring code and formatting code blocks
    ========================================================================== */
 
 
@@ -939,9 +846,11 @@ code {
 
 .type-text {
     font-size: 0.95em;
+    font-family: $fixed-width-font;
     background-color: #f7f7f7;
     border-radius: 0.25em;
 }
+
 
 /* inline keyboard icons */
 
@@ -957,11 +866,14 @@ kbd {
     background-color: #e1e3e5;
     border: 1px solid #adb3b9;
     border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(12,13,14,0.2), 0 0 0 2px #FFF inset;
+    box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #FFF inset;
     white-space: nowrap;
 }
 
+
 /* highlighted text */
+
+
 /* also change type-text if it is highlighted */
 
 .highlight,

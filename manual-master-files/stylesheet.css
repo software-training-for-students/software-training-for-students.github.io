@@ -51,18 +51,18 @@ h2 {
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
-  font-size: 1.75em;
-  font-weight: 400; }
+  font-size: 1.7em; }
   @media print {
     h2 {
       margin: 1.25em 0 0 0;
-      font-size: 1.35em; } }
+      font-size: 1.5em; } }
 
 h3 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
   margin: 1.5em 0 0 0;
-  font-size: 1.5em; }
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.25em; }
 
 /* paragraph text */
 p {
@@ -131,6 +131,7 @@ ol {
   margin: 5em 0 0 0;
   text-align: center; }
   #coverpage-description p {
+    font-family: "Roboto", sans-serif;
     margin: 0; }
   #coverpage-description img {
     padding: 1em;
@@ -147,6 +148,8 @@ ol {
     margin: 0 0 0 1em;
     list-style-type: none; }
     #outline ol li::before {
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
       width: 1.25em;
       padding: 0.4em;
       text-align: center;
@@ -156,6 +159,7 @@ ol {
       background-color: orange;
       float: left; }
     #outline ol p {
+      font-family: "Roboto", sans-serif;
       margin: 0 0 0 2.75em;
       padding: 0.2em 0 0 0; }
   #outline li {
@@ -163,41 +167,7 @@ ol {
     height: 2em;
     page-break-inside: avoid; }
 
-/* SECTION 3: font management
-   ========================================================================== */
-/* heavy bold title font */
-.instruction-list li::before,
-#outline li::before {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700; }
-
-/* regular title font */
-#coverpage-description p,
-.toolbox p,
-#outline p,
-.centered-image-tiny p,
-.centered-image-small p,
-.centered-image-medium p,
-.centered-image-large p,
-.full-width-image p,
-.side-image-small p,
-.side-image-medium p,
-.side-image-large p,
-.sidebyside-image-small p,
-.sidebyside-image-large p {
-  font-family: "Roboto", sans-serif; }
-
-/* paragraph text */
-ul li,
-ol li {
-  font-family: "Roboto", sans-serif; }
-
-/* type text, code, keyboard icons */
-kbd,
-.type-text {
-  font-family: "Roboto Mono", monospace; }
-
-/* SECTION 4: image classes
+/* SECTION 3: image classes
    ========================================================================== */
 /* full width images */
 .full-width-image {
@@ -346,7 +316,7 @@ kbd,
   border-color: lightgray;
   border-radius: 0.25em; }
 
-/* SECTION 5: sidebar elements
+/* SECTION 4: sidebar elements
    ========================================================================== */
 /* sidebar notes */
 .sidebar-note {
@@ -414,7 +384,7 @@ kbd,
   margin-left: 1.5em;
   padding: 0.75em; }
 
-/* SECTION: toolbox and sidebar icons
+/* SECTION 5: toolbox and sidebar icons
    ========================================================================== */
 /* sidebar icons */
 .sidebar-icon,
@@ -460,6 +430,7 @@ kbd,
     margin-left: 3.75em;
     padding: 0em;
     margin-top: 0em;
+    font-family: "Roboto", sans-serif;
     font-size: 1em; }
   .toolbox div {
     min-height: 3em;
@@ -509,6 +480,8 @@ table {
   list-style-type: none;
   margin-left: 1em; }
   .instruction-list li::before {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
     content: counter(step-counter);
     border-radius: 100%;
     color: white;
@@ -568,7 +541,7 @@ table {
   margin-top: 0em;
   padding: 0em; }
 
-/* SECTION 9: coloring code and formatting code blocks
+/* SECTION 7: coloring code and formatting code blocks
    ========================================================================== */
 /* code block formatting */
 code {
@@ -664,6 +637,7 @@ code {
 /* type text */
 .type-text {
   font-size: 0.95em;
+  font-family: "Roboto Mono", monospace;
   background-color: #f7f7f7;
   border-radius: 0.25em; }
 
