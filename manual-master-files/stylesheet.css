@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro|Ubuntu:400,300italic,300,400italic,500,500italic,700,700italic|Lora:400,400italic,700,700italic");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,400i,900");
 /* ==========================================================================
 
     HELLO USER! Welcome to the master stylehsheet used to edit STS Manuals.
@@ -26,52 +26,59 @@ body {
   padding: 0 2em 0 2em;
   max-width: 50em;
   min-width: 40em; }
+  @media print {
+    body {
+      padding: 0; } }
 
-@media print {
-  body {
-    padding: 0em; } }
 /* headings */
 h1 {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 700;
   margin: 3em 0 0 0;
   padding: 0 0 0.25em 0;
-  font-size: 2.5em;
   border-bottom: 2px solid;
   border-color: #ecf0f1;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 2.5em;
   clear: both; }
+  @media print {
+    h1 {
+      margin: 1.75em 0 0 0;
+      padding: 0 0 0.2em 0;
+      font-size: 2.1em; } }
 
 h2 {
+  margin: 1.5em 0 0 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
   font-size: 1.75em;
-  margin-top: 1.5em; }
+  font-weight: 400; }
+  @media print {
+    h2 {
+      margin: 1.25em 0 0 0;
+      font-size: 1.35em; } }
 
 h3 {
-  font-size: 1.5em;
-  margin-top: 1.25em; }
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  margin: 1.5em 0 0 0;
+  font-size: 1.5em; }
 
-@media print {
-  h1 {
-    font-size: 2.1em;
-    margin-top: 1.75em;
-    padding-bottom: 0.2em; }
-
-  h2 {
-    margin-top: 1.25em;
-    font-size: 1.35em; } }
 /* paragraph text */
 p {
-  margin-top: 1em;
+  margin: 1em 0 0 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   font-size: 1em;
-  line-height: 160%; }
+  line-height: 150%; }
+  @media print {
+    p {
+      font-size: 0.8em; } }
 
-@media print {
-  p {
-    font-size: 0.8em; } }
 /* links */
 a {
   color: #1AC5E8;
-  text-decoration: none;
-  font-weight: bold; }
+  text-decoration: none; }
 
 a:hover {
   color: #17A3BF;
@@ -86,11 +93,13 @@ ol {
   ul ol,
   ol ul,
   ol ol {
-    margin-top: 0; }
+    margin: 0 0 0 3em; }
   ul li,
   ol li {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400; }
   ul li::before,
   ol li::before {
     counter-increment: step-counter; }
@@ -103,40 +112,40 @@ ol {
    ========================================================================== */
 /* front page */
 #coverpage-title {
-  margin-top: 5em;
+  margin: 5em 0 0 0;
   text-align: center; }
   #coverpage-title h1 {
-    font-size: 3.75em;
-    padding: 0.2em;
     margin: 0;
+    padding: 0.2em;
+    font-size: 3.75em;
     border: none; }
   #coverpage-title h2 {
-    padding: 0.25em;
-    margin: 0; }
+    margin: 0;
+    padding: 0.25em; }
   #coverpage-title h3 {
     margin: 0;
     padding: 0;
     font-size: 1.25em; }
 
 #coverpage-description {
-  margin-top: 5em;
+  margin: 5em 0 0 0;
   text-align: center; }
   #coverpage-description p {
     margin: 0; }
   #coverpage-description img {
-    width: 12em;
-    padding: 1em; }
+    padding: 1em;
+    width: 12em; }
+  @media print {
+    #coverpage-description {
+      margin: 24em 0 0 0; } }
 
-@media print {
-  #coverpage-description {
-    margin-top: 24em; } }
 /* topics outline */
 #outline {
-  column-count: 2;
-  margin: 1.5em 0 0 0; }
+  margin: 1.5em 0 0 0;
+  column-count: 2; }
   #outline ol {
-    list-style-type: none;
-    margin: 0 0 0 1em; }
+    margin: 0 0 0 1em;
+    list-style-type: none; }
     #outline ol li::before {
       width: 1.25em;
       padding: 0.4em;
@@ -150,26 +159,19 @@ ol {
       margin: 0 0 0 2.75em;
       padding: 0.2em 0 0 0; }
   #outline li {
-    page-break-inside: avoid;
+    padding: 0 0 0.75em 0;
     height: 2em;
-    padding: 0 0 0.75em 0; }
+    page-break-inside: avoid; }
 
 /* SECTION 3: font management
    ========================================================================== */
 /* heavy bold title font */
 .instruction-list li::before,
 #outline li::before {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700; }
 
-/* bold title font */
-h2 {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 400; }
-
 /* regular title font */
-h3,
-#coverpage-title h2,
 #coverpage-description p,
 .toolbox p,
 #outline p,
@@ -183,22 +185,17 @@ h3,
 .side-image-large p,
 .sidebyside-image-small p,
 .sidebyside-image-large p {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300; }
+  font-family: "Roboto", sans-serif; }
 
 /* paragraph text */
-p,
-table th,
-table tr,
 ul li,
 ol li {
-  font-family: "Lora", serif; }
+  font-family: "Roboto", sans-serif; }
 
 /* type text, code, keyboard icons */
-code,
 kbd,
 .type-text {
-  font-family: "Source Code Pro", serif; }
+  font-family: "Roboto Mono", monospace; }
 
 /* SECTION 4: image classes
    ========================================================================== */
@@ -342,38 +339,6 @@ kbd,
 
   .centered-image-tiny img {
     max-width: 5em; } }
-/* optional image captions */
-.centered-image-tiny p,
-.centered-image-small p,
-.centered-image-medium p,
-.centered-image-large p,
-.full-width-image p,
-.side-image-small p,
-.side-image-medium p,
-.side-image-large p,
-.sidebyside-image-small p,
-.sidebyside-image-large p {
-  font-size: 0.85em;
-  margin-top: 0em;
-  margin-bottom: 0em;
-  padding: 0.25em;
-  border-radius: 0.25em;
-  text-align: center;
-  clear: both;
-  line-height: 125%; }
-
-@media print {
-  .centered-image-tiny p,
-  .centered-image-small p,
-  .centered-image-medium p,
-  .centered-image-large p,
-  .full-width-image p,
-  .side-image-small p,
-  .side-image-medium p,
-  .side-image-large p,
-  .sidebyside-image-small p,
-  .sidebyside-image-large p {
-    font-size: 0.7em; } }
 /* optional image borders */
 .border img {
   border-style: solid;
@@ -385,27 +350,23 @@ kbd,
    ========================================================================== */
 /* sidebar notes */
 .sidebar-note {
+  margin: 1em 0 1em 1em;
+  padding: 0;
   width: 16em;
   float: right;
-  margin-top: 1em;
-  margin-left: 1em;
-  margin-bottom: 1em;
-  padding: 0em;
-  border: 0.2em solid;
-  border-color: palegreen;
-  border-radius: 0.25em;
-  clear: both; }
+  border: 0.25em solid #b2ebff;
+  border-radius: 0.5em;
+  clear: both;
+  overflow: hidden; }
   .sidebar-note h2 {
-    margin: 0em;
+    margin: 0;
+    padding: 0.4em;
     font-size: 1.25em;
-    padding: 0.5em;
-    background-color: #F0F7F0;
+    background-color: #f2fbff;
     text-align: center; }
   .sidebar-note img {
     width: 15em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    margin-bottom: 0.25em;
+    margin: 0.25em 0.5em 0.5em 0.25em;
     border-radius: 0.25em;
     padding: 0em; }
   .sidebar-note p {
@@ -531,7 +492,9 @@ table {
   table td,
   table th {
     padding: 0.75em;
-    border: 1px solid #f0f0f0; }
+    border: 1px solid #f0f0f0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400; }
   table th {
     background-color: #f0f0f0; }
 
@@ -609,6 +572,7 @@ table {
    ========================================================================== */
 /* code block formatting */
 code {
+  font-family: "Roboto Mono", monospace;
   font-size: 0.9em;
   padding: 1.25em;
   margin-left: 3em;
@@ -708,6 +672,7 @@ kbd {
   display: inline-block;
   margin: 0 .1em;
   padding: .1em .6em;
+  font-family: "Roboto Mono", monospace;
   font-size: 11px;
   line-height: 1.4;
   color: #242729;

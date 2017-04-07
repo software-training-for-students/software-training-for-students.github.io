@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700|Source+Code+Pro');
-/* @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Ubuntu:400,300italic,300,400italic,500,500italic,700,700italic|Lora:400,400italic,700,700italic'); */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,400i,900');
+
 
 /* ==========================================================================
 
@@ -21,15 +21,15 @@
 /* DOCUMENT FONTS */
 
 // font used in heading elements and titles
-// $heading-font: 'Ubuntu', sans-serif;
-$heading-font: 'Roboto', sans-serif;
+$heading-font-family: 'Roboto', sans-serif;
+$heading-font-weight: 900;
 
 // font used in primary body text
-// $body-font: 'Lora', serif;
-$body-font: 'Roboto', sans-serif;
+$body-font-family: 'Roboto', sans-serif;
+$body-font-weight: 400;
 
 // font used in inline type text and code blocks
-$fixed-width-font: 'Source Code Pro', serif;
+$fixed-width-font: 'Roboto Mono', monospace;
 
 
 
@@ -53,11 +53,9 @@ body {
     padding: 0 2em 0 2em;
     max-width: 50em;
     min-width: 40em;
-}
-
-@media print {
-    body {
-        padding: 0em;
+    
+    @media print {
+        padding: 0;
     }
 }
 
@@ -65,49 +63,55 @@ body {
 /* headings */
 
 h1 {
-    font-family: $heading-font;
-    font-weight: 700;
     margin: 3em 0 0 0;
     padding: 0 0 0.25em 0;
-    font-size: 2.5em;
     border-bottom: 2px solid;
     border-color: #ecf0f1;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    font-size: 2.5em;
     clear: both;
+    
+    @media print {
+        margin: 1.75em 0 0 0;
+        padding: 0 0 0.2em 0;
+        font-size: 2.1em;
+    }
 }
 
+
 h2 {
+    margin: 1.5em 0 0 0;
+    padding: 0;
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
     font-size: 1.75em;
-    margin-top: 1.5em;
+    font-weight: 400;
+    
+    @media print {
+        margin: 1.25em 0 0 0;
+        font-size: 1.35em;
+    }
 }
 
 h3 {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    margin: 1.5em 0 0 0;
     font-size: 1.5em;
-    margin-top: 1.25em;
-}
-
-@media print {
-    h1 {
-        font-size: 2.1em;
-        margin-top: 1.75em;
-        padding-bottom: 0.2em;
-    }
-    h2 {
-        margin-top: 1.25em;
-        font-size: 1.35em;
-    }
 }
 
 
 /* paragraph text */
 
 p {
-    margin-top: 1em;
+    margin: 1em 0 0 0;
+    font-family: $body-font-family;
+    font-weight: $body-font-weight;
     font-size: 1em;
     line-height: 150%;
-}
-
-@media print {
-    p {
+    
+    @media print {
         font-size: 0.8em;
     }
 }
@@ -118,7 +122,6 @@ p {
 a {
     color: #1AC5E8;
     text-decoration: none;
-    font-weight: bold;
 }
 
 a:hover {
@@ -136,12 +139,14 @@ ol {
     
     ul,
     ol {
-        margin-top: 0;
+        margin: 0 0 0 3em;
     }
     
     li {
         margin: 0;
         padding: 0;
+        font-family: $body-font-family;
+        font-weight: $body-font-weight;
     }
     
     li::before {
@@ -163,19 +168,19 @@ ol {
 /* front page */
 
 #coverpage-title {
-    margin-top: 5em;
+    margin: 5em 0 0 0;
     text-align: center;
     
     h1 {
-        font-size: 3.75em;
-        padding: 0.2em;
         margin: 0;
+        padding: 0.2em;
+        font-size: 3.75em;
         border: none;
     }
     
     h2 {
-        padding: 0.25em;
         margin: 0;
+        padding: 0.25em;
     }
     
     h3 {
@@ -186,7 +191,7 @@ ol {
 }
 
 #coverpage-description {
-    margin-top: 5em;
+    margin: 5em 0 0 0;
     text-align: center;
     
     p {
@@ -194,14 +199,12 @@ ol {
     }
     
     img {
-        width: 12em;
         padding: 1em;
+        width: 12em;
     }
-}
-
-@media print {
-    #coverpage-description {
-        margin-top: 24em;
+    
+    @media print {
+        margin: 24em 0 0 0;
     }
 }
 
@@ -209,12 +212,12 @@ ol {
 /* topics outline */
 
 #outline {
-    column-count: 2;
     margin: 1.5em 0 0 0;
+    column-count: 2;
     
     ol {
-        list-style-type: none;
         margin: 0 0 0 1em;
+        list-style-type: none;
         
         li::before {
             width: 1.25em;
@@ -234,9 +237,9 @@ ol {
     }
     
     li {
-        page-break-inside: avoid;
-        height: 2em;
         padding: 0 0 0.75em 0;
+        height: 2em;
+        page-break-inside: avoid;
     }
 }
 
@@ -248,23 +251,13 @@ ol {
 
 .instruction-list li::before,
 #outline li::before {
-    font-family: $heading-font;
+    font-family: $heading-font-family;
     font-weight: 700;
-}
-
-
-/* bold title font */
-
-h2 {
-    font-family: $heading-font;
-    font-weight: 400;
 }
 
 
 /* regular title font */
 
-h3,
-#coverpage-title h2,
 #coverpage-description p,
 .toolbox p,
 #outline p,
@@ -278,25 +271,20 @@ h3,
 .side-image-large p,
 .sidebyside-image-small p,
 .sidebyside-image-large p {
-    font-family: $heading-font;
-    font-weight: 300;
+    font-family: $heading-font-family;
 }
 
 
 /* paragraph text */
 
-p,
-table th,
-table tr,
 ul li,
 ol li {
-    font-family: $body-font;
+    font-family: $body-font-family;
 }
 
 
 /* type text, code, keyboard icons */
 
-code,
 kbd,
 .type-text {
     font-family: $fixed-width-font;
@@ -508,45 +496,6 @@ kbd,
     }
 }
 
-
-/* optional image captions */
-
-.centered-image-tiny p,
-.centered-image-small p,
-.centered-image-medium p,
-.centered-image-large p,
-.full-width-image p,
-.side-image-small p,
-.side-image-medium p,
-.side-image-large p,
-.sidebyside-image-small p,
-.sidebyside-image-large p {
-    font-size: 0.85em;
-    margin-top: 0em;
-    margin-bottom: 0em;
-    padding: 0.25em;
-    border-radius: 0.25em;
-    text-align: center;
-    clear: both;
-    line-height: 125%;
-}
-
-@media print {
-    .centered-image-tiny p,
-    .centered-image-small p,
-    .centered-image-medium p,
-    .centered-image-large p,
-    .full-width-image p,
-    .side-image-small p,
-    .side-image-medium p,
-    .side-image-large p,
-    .sidebyside-image-small p,
-    .sidebyside-image-large p {
-        font-size: 0.7em;
-    }
-}
-
-
 /* optional image borders */
 
 .border img {
@@ -564,30 +513,26 @@ kbd,
 /* sidebar notes */
 
 .sidebar-note {
+    margin: 1em 0 1em 1em;
+    padding: 0;
     width: 16em;
     float: right;
-    margin-top: 1em;
-    margin-left: 1em;
-    margin-bottom: 1em;
-    padding: 0em;
-    border: 0.2em solid;
-    border-color: palegreen;
-    border-radius: 0.25em;
+    border: 0.25em solid #b2ebff;
+    border-radius: 0.5em;
     clear: both;
+    overflow: hidden;
     
     h2 {
-        margin: 0em;
+        margin: 0;
+        padding: 0.4em;
         font-size: 1.25em;
-        padding: 0.5em;
-        background-color: #F0F7F0;
+        background-color: #f2fbff;
         text-align: center;
     }
     
     img {
         width: 15em;
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-        margin-bottom: 0.25em;
+        margin: 0.25em 0.5em 0.5em 0.25em;
         border-radius: 0.25em;
         padding: 0em;
     }
@@ -759,6 +704,8 @@ table {
     th {
         padding: 0.75em;
         border: 1px solid #f0f0f0;
+        font-family: $body-font-family;
+        font-weight: $body-font-weight;
     }
     
     th {
@@ -874,6 +821,7 @@ table {
 /* code block formatting */
 
 code {
+    font-family: $fixed-width-font;
     font-size: 0.9em;
     padding: 1.25em;
     margin-left: 3em;
@@ -1001,6 +949,7 @@ kbd {
     display: inline-block;
     margin: 0 .1em;
     padding: .1em .6em;
+    font-family: $fixed-width-font;
     font-size: 11px;
     line-height: 1.4;
     color: #242729;
