@@ -448,49 +448,35 @@ ol {
         text-align: center;
     }
     img {
-        width: 15em;
-        margin: 0.25em 0.5em 0.5em 0.25em;
-        border-radius: 0.25em;
+        width: 95%;
+        margin: 0.25em auto 0.5em auto;
         padding: 0em;
+        display: block;
+        border-radius: 0.25em;
     }
     p {
+        margin: 0em !important;
         padding: 0.75em;
         font-size: 0.85em;
-        margin: 0em;
-        text-align: left;
+        line-height: 140%;
     }
-}
-
-.instruction-list .sidebar-note p,
-.instruction-list .instruction-list .sidebar-note p {
-    padding: 0.75em;
-    font-size: 0.85em;
-    margin: 0em;
-    text-align: left;
 }
 
 @media print {
-    .sidebar-note p,
-    .instruction-list .sidebar-note p,
-    .instruction-list .instruction-list .sidebar-note p {
-        font-size: 0.7em;
-        padding: 1em;
-    }
     .sidebar-note {
         width: 13em;
-    }
-    .sidebar-note img {
-        width: 12em;
-        margin-right: 0.5em;
-        margin-left: 0.5em;
-    }
-    .sidebar-note h2 {
-        font-size: 1em;
+        h1 {
+            font-size: 1em;
+        }
+        p {
+            font-size: 0.7em;
+            padding: 1em;
+        }
     }
 }
 
 
-/* regular lists inside sidebar elements */
+/* regular lists inside sidebar elements 
 
 .sidebar-note li p,
 .instruction-list .sidebar-note li p,
@@ -507,7 +493,7 @@ ol {
     margin-left: 1.5em;
     padding: 0.75em;
 }
-
+*/
 
 /* SECTION 5: toolbox and sidebar icons
    ========================================================================== */
@@ -872,6 +858,8 @@ kbd {
 
 
 /* highlighted text */
+
+
 /* also change type-text if it is highlighted */
 
 .highlight,
