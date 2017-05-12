@@ -4,6 +4,8 @@ Software Training for Students is an organization that develops and delivers sof
 
 This repository serves a variety of purposes. Primarily, it hosts the master files that every manual links to. It also contains a guide on how to edit/strucutre manuals, an empty manual template (for creating new manuals), and other resources.
 
+## STS Manual Editor
+You can find the interactive manual editor [here](/editor/index.html). If you still prefer to edit manuals by hand, follow the instructions below.
 
 ## Manual Master Files
 Every manual created by STS is written in its own HTML file. Each HTML file links to a series of files that are hosted in this repository.
